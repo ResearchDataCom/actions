@@ -46,6 +46,11 @@ write</code> permissions.</dd>
 GitHub release; requires <code>contents: write</code>
 permissions.</dd>
 
+<dt><a href="publish-pypi/action.yaml">publish-pypi</a></dt>
+<dd>Retrieves built Python source/binary distribution artifacts and
+uploads them to the Python Package Index (PyPI); requires
+<code>id-token: write</code> permissions.</dd>
+
 <dt><a href="python-freeze/action.yaml">python-freeze</a></dt>
 <dd>Generates dependency pins for Python projects.</dd>
 
