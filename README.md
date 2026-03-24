@@ -36,6 +36,11 @@ hooks.</dd>
 <dt><a href="opentofu-freeze/action.yaml">opentofu-freeze</a></dt>
 <dd>Generates dependency pins for OpenTofu modules.</dd>
 
+<dt><a href="publish-ghpages/action.yaml">publish-ghpages</a></dt>
+<dd>Retrieves publication-ready documentation artifacts and uploads
+them to the project's `gh-pages` branch; requires <code>contents:
+write</code> permissions.</dd>
+
 <dt><a href="publish-github/action.yaml">publish-github</a></dt>
 <dd>Retrieves build artifacts and uploads them to the corresponding
 GitHub release; requires <code>contents: write</code>
@@ -50,6 +55,11 @@ permissions.</dd>
 <dt><a href="python-build/action.yaml">python-build</a></dt>
 <dd>Builds a Python distribution via GNU Make and stores the results
 in a workflow artifact.</dd>
+
+<dt><a href="sphinx-build/action.yml">sphinx-docs</a></dt>
+<dd>Generates versioned documentation in multiple formats from Sphinx
+sources via GNU Make and stores the results in a workflow
+artifact.</dd>
 
 </dl>
 

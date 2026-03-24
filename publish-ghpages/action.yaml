@@ -1,0 +1,44 @@
+name: Publish documentation (GitHub Pages)
+description: >-
+  Retrieves a project's publication-ready documentation from GitHub
+  Actions artifact storage and uploads it to project's `gh-pages`
+  branch.  The calling GitHub Actions workflow job **MUST** have
+  permission to
+  [create or update file contents](https://docs.github.com/en/rest/repos/contents)
+  (`contents: write`).
+
+inputs:
+  artifact-path:
+    description: >-
+      The artifact path to upload.
+    required: true
+    default: build/docs
+  cname:
+    description: >-
+      Optionally set a
+      [custom domain](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site)
+      for the GitHub Pages site.
+    default: null
+  gh-token:
+    description: >-
+      The API token used by GitHub Actions
+      [workflows](https://docs.github.com/en/actions/reference/workflows-and-actions/workflow-syntax#permissions)
+      and
+      [jobs](https://docs.github.com/en/actions/reference/workflows-and-actions/workflow-syntax#jobsjob_idpermissions).
+    required: true
+    default: ${{ github.token }}
+
+runs:
+  using: composite
+  steps:
+    - name: Download the documentation artifacts.
+      uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8.0.1
+      with:
+        merge-multiple: true
+    - name: Upload documentation to the `gh-pages` branch.
+      uses: peaceiris/actions-gh-pages@84c30a85c19949d7eee79c4ff27748b70285e453 # v4.1.0
+      with:
+        github_token: ${{ inputs.gh-token }}
+        publish_dir: ${{ inputs.artifact-path }}
+        cname: ${{ inputs.cname }}
+        force_orphan: true
