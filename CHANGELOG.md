@@ -1,3 +1,15 @@
+## v2.1.2 (2026-04-29)
+
+### Bug Fixes
+
+- update rhysd/actionlint to v1.7.12
+- update commitizen-tools/commitizen to v4.13.10
+- update de-vri-es/setup-git-credentials to v2.2.0
+- update actions/create-github-app-token to v3.1.1
+- update actions/cache to v5.0.5
+- update actions/upload-artifact to v7.0.1
+- **python-test**: force Selenium to use the Chrome version that matches ChromeDriver
+
 ## v2.1.1 (2026-03-31)
 
 ### Bug Fixes
