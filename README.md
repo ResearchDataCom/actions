@@ -1,8 +1,8 @@
-# Release Engineering
+# GitHub Actions Workflows
 
-Simplify project maintenance with shared GitHub Actions workflows that
-enable privilege separation, facilitate reproducible builds, and
-support matrix strategies.
+Simplify project release engineering with actions that feature
+privilege separation, automate testing, facilitate reproducible
+builds, support matrix strategies, and mitigate supply chain attacks.
 
 > [!NOTE]
 >
@@ -13,14 +13,14 @@ support matrix strategies.
 
 [_Good DevOps Practice_](https://github.com/ResearchDataCom/good-devops-practice)
 describes the underlying methodology and recommended tooling in
-greater detail.  For an example of how to use these workflows, refer
-to the
-[Python project template's CI workflow](https://github.com/ResearchDataCom/good-devops-practice/blob/main/python-template/%7B%7B%20cookiecutter.package_slug%20%7D%7D/.github/workflows/ci.yaml).
+greater detail.  For an example of how to use these in GitHub Actions
+workflows, refer to the
+[python-template continuous integration (CI) workflow](https://github.com/ResearchDataCom/good-devops-practice/blob/main/python-template/%7B%7B%20cookiecutter.package_slug%20%7D%7D/.github/workflows/ci.yaml).
 
-## Available Workflows
+## Available Actions
 
-Workflows are listed in alphabetical order.  Refer to the linked
-workflow definitions for additional details.
+Actions are listed in alphabetical order.  Refer to the linked action
+definitions for additional details.
 
 <dl>
 
