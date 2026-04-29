@@ -98,7 +98,7 @@ runs:
         private-key: ${{ inputs.access-key }}
         owner: ${{ inputs.owner || github.repository_owner }}
     - if: steps.private-repository-access.outputs.token
-      uses: de-vri-es/setup-git-credentials@5e1f18da68b7039c7f824408d170811aaec93ca8 # v2.1.2
+      uses: de-vri-es/setup-git-credentials@5dd446b3857806f44ea73acf83c193190a385d63 # v2.2.0
       with:
         credentials: |
           https://x-access-token:${{ steps.private-repository-access.outputs.token }}@github.com/
