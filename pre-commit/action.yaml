@@ -87,10 +87,6 @@ runs:
       uses: aquasecurity/setup-trivy@3fb12ec12f41e471780db15c232d5dd185dcb514 # v0.2.6
       with:
         version: v0.69.3
-    - uses: actions/cache@27d5ce7f107fe9357f9df03efb73ab90386fccae # v5.0.5
-      with:
-        path: ~/.cache/pre-commit
-        key: pre-commit|${{ inputs.python-version }}|${{ hashFiles('.pre-commit-config.yaml') }}
     - name: Set up private repository access (if configured).
       id: private-repository-access
       if: inputs.access-app-id && inputs.access-key
@@ -105,6 +101,11 @@ runs:
       with:
         credentials: |
           https://x-access-token:${{ steps.private-repository-access.outputs.token }}@github.com/
+    - name: Cache pre-commit hooks.
+      uses: actions/cache@27d5ce7f107fe9357f9df03efb73ab90386fccae # v5.0.5
+      with:
+        path: ~/.cache/pre-commit
+        key: pre-commit|${{ inputs.python-version }}|${{ hashFiles('.pre-commit-config.yaml') }}
     - name: Run the linter.
       shell: bash
       run: pre-commit run --show-diff-on-failure --color=always --all-files
