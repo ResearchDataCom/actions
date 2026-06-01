@@ -1,4 +1,4 @@
-name: Lint code
+name: Lint code.
 description: >-
   Checks code syntax/style using the configured
   [pre-commit](https://pre-commit.com/) hooks.  Installs several
@@ -44,30 +44,31 @@ inputs:
 runs:
   using: composite
   steps:
-    - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
-    - name: Install Python ${{ inputs.python-version }}
+    - name: Clone this GitHub repository (just the latest commit).
+      uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+    - name: Install Python ${{ inputs.python-version }}.
       uses: actions/setup-python@a309ff8b426b58ec0e2a45f0f869d46889d02405 # v6.2.0
       with:
         python-version: ${{ inputs.python-version }}
         cache: ${{ hashFiles('pyproject.toml') && 'pip' || null }}
-    - name: Install pre-commit
+    - name: Install pre-commit.
       shell: bash
       run: pip install -r "${GITHUB_ACTION_PATH}/requirements.txt" --require-hashes
-    - name: Install OpenTofu
+    - name: Install OpenTofu.
       uses: opentofu/setup-opentofu@fc711fa910b93cba0f3fbecaafc9f42fd0c411cb # v2.0.0
       with:
         cache: true
         tofu_version: 1.11.5
-    - name: Install TFLint
+    - name: Install TFLint.
       uses: terraform-linters/setup-tflint@b480b8fcdaa6f2c577f8e4fa799e89e756bb7c93 # v6.2.2
       with:
         cache: true
         tflint_version: v0.61.0
-    - name: Install TFLint plugins
+    - name: Install TFLint plugins.
       if: hashFiles('.tflint.*')
       shell: bash
       run: tflint --init
-    - name: Install pinact
+    - name: Install pinact.
       shell: bash
       run: |
         version=v3.9.0
@@ -82,7 +83,7 @@ runs:
         echo "$bindir" >> $GITHUB_PATH
       env:
         GH_TOKEN: ${{ github.token }}
-    - name: Install Trivy
+    - name: Install Trivy.
       uses: aquasecurity/setup-trivy@3fb12ec12f41e471780db15c232d5dd185dcb514 # v0.2.6
       with:
         version: v0.69.3
@@ -90,19 +91,22 @@ runs:
       with:
         path: ~/.cache/pre-commit
         key: pre-commit|${{ inputs.python-version }}|${{ hashFiles('.pre-commit-config.yaml') }}
-    - id: private-repository-access
+    - name: Set up private repository access (if configured).
+      id: private-repository-access
       if: inputs.access-app-id && inputs.access-key
       uses: actions/create-github-app-token@1b10c78c7865c340bc4f6099eb2f838309f1e8c3 # v3.1.1
       with:
         app-id: ${{ inputs.access-app-id }}
         private-key: ${{ inputs.access-key }}
         owner: ${{ inputs.owner || github.repository_owner }}
-    - if: steps.private-repository-access.outputs.token
+    - name: Configure Git client authentication.
+      if: steps.private-repository-access.outputs.token
       uses: de-vri-es/setup-git-credentials@5dd446b3857806f44ea73acf83c193190a385d63 # v2.2.0
       with:
         credentials: |
           https://x-access-token:${{ steps.private-repository-access.outputs.token }}@github.com/
-    - shell: bash
+    - name: Run the linter.
+      shell: bash
       run: pre-commit run --show-diff-on-failure --color=always --all-files
       env:
         GITHUB_TOKEN: ${{ steps.private-repository-access.outputs.token }}

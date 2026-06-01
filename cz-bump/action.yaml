@@ -1,4 +1,4 @@
-name: Release code
+name: Release code using commitizen.
 description: >-
   Determines the next version number, updates project metadata, and
   tags the new release.  The calling GitHub Actions workflow job
@@ -23,15 +23,18 @@ inputs:
 runs:
   using: composite
   steps:
-    - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+    - name: Clone this GitHub repository (including its history).
+      uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
       with:
         fetch-depth: 0
-    - id: cz
+    - name: Tag the next release and summarize its changes.
+      id: cz
       uses: commitizen-tools/commitizen-action@338bbd841b75aaee6bf5340e1fa12f6ab58ff9ff # 0.27.1
       with:
         changelog_increment_filename: ${{ inputs.changelog-fragment }}
         github_token: ${{ github.token }}
-    - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+    - name: Upload the release to artifact storage.
+      uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
       with:
         name: ${{ inputs.artifact-name }}
         path: .

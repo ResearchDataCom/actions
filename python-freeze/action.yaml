@@ -1,9 +1,11 @@
-name: Pin Python project dependencies
+name: Pin Python project dependencies.
 description: >-
   Pins dependencies and stores them in a
   [GitHub Actions workflow artifact](https://docs.github.com/en/actions/concepts/workflows-and-actions/workflow-artifacts),
-  an immutable archive, which facilitates reproducible builds.  Run
-  this action after pre-commit in the same workflow job.
+  an immutable archive, which facilitates reproducible builds.
+  Assumes Python is installed and private repository access
+  established (if needed), e.g., as if run after the ../pre-commit
+  action in the same workflow job.
 
 inputs:
   artifact-name:
@@ -16,12 +18,14 @@ inputs:
 runs:
   using: composite
   steps:
-    - name: Install pip-tools
+    - name: Install pip-tools.
       shell: bash
       run: pip install -r "${GITHUB_ACTION_PATH}/requirements.txt" --require-hashes
-    - shell: bash
+    - name: Generate dependency pins.
+      shell: bash
       run: pip-compile
-    - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+    - name: Upload Python package dependency pins to artifact storage.
+      uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
       with:
         name: ${{ inputs.artifact-name }}
         path: requirements.txt

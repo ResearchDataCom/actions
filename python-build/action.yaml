@@ -1,4 +1,4 @@
-name: Build Python code
+name: Build Python code.
 description: >-
   Builds a Python distribution via GNU Make and uploads the results to a
   [GitHub Actions workflow artifact](https://docs.github.com/en/actions/concepts/workflows-and-actions/workflow-artifacts),
@@ -6,6 +6,8 @@ description: >-
   `build-deps`, which runs as the superuser, and `dist` **MUST**
   handle other build dependencies.  Supports
   [matrix strategies](https://docs.github.com/en/actions/how-tos/write-workflows/choose-what-workflows-do/run-job-variations).
+  Run in an isolated workflow job to limit the risk of a supply chain
+  attack.
 
 inputs:
   artifact-name:
@@ -33,27 +35,33 @@ inputs:
 runs:
   using: composite
   steps:
-    - uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8.0.1
+    - name: Download the release artifact.
+      uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8.0.1
       with:
         name: ${{ inputs.release }}
-    - if: inputs.requirements
+    - name: Download the Python package dependency pins.
+      if: inputs.requirements
       uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8.0.1
       with:
         name: ${{ inputs.requirements }}
-    - uses: actions/setup-python@a309ff8b426b58ec0e2a45f0f869d46889d02405 # v6.2.0
+    - name: Install Python ${{ inputs.python-version }}.
+      uses: actions/setup-python@a309ff8b426b58ec0e2a45f0f869d46889d02405 # v6.2.0
       with:
         python-version: ${{ inputs.python-version }}
         cache: pip
-    - shell: bash
+    - name: Install build dependencies.
+      shell: bash
       run: sudo make build-deps
-    - shell: bash
+    - name: Build the Python distribution.
+      shell: bash
       run: make dist
     # The file with the `.does-not-exist` suffix is listed solely to
     # force actions/upload-artifact to preserve the directory
     # structure of the build artifacts.  Developers **MUST NOT**
     # create this file to avoid a false positive if the build fails;
     # cf. https://github.com/actions/upload-artifact/issues/174#issuecomment-2878874192.
-    - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+    - name: Upload the built distribution to artifact storage.
+      uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
       with:
         name: ${{ inputs.artifact-name }}
         path: |
