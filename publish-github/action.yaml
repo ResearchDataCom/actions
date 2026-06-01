@@ -19,7 +19,7 @@ inputs:
       new version.  Disable by setting this to the empty string
       (`""`).
     required: true
-    default: ""
+    default: body.md
   tag:
     description: The version tag to publish.
     required: true
