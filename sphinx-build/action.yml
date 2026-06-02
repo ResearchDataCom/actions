@@ -1,4 +1,4 @@
-name: Document code with Sphinx
+name: Document code with Sphinx.
 description: >-
   Generates versioned documentation in multiple formats from Sphinx
   sources via GNU Make and stores the results in a GitHub Actions
