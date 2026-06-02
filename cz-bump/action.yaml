@@ -39,6 +39,7 @@ runs:
         name: ${{ inputs.artifact-name }}
         path: .
         if-no-files-found: error
+        include-hidden-files: true
 
 outputs:
   released:
