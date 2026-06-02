@@ -1,3 +1,19 @@
+## v2.2.0 (2026-06-02)
+
+### Bug Fixes
+
+- skip release artifact downloads in selected cases
+- **cz-bump**: include hidden files in the release artifact
+- cache pinned dependencies
+- **publish-github**: publish a change log fragment by default
+- update browser-actions/setup-chrome to v2.1.2
+- update actions/create-github-app-token to v3.2.0
+- update opentofu/setup-opentofu to v2.0.1
+
+### New Features
+
+- define common Sphinx CI workflows
+
 ## v2.1.2 (2026-04-29)
 
 ### Bug Fixes
