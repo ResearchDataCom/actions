@@ -71,7 +71,7 @@ runs:
     - name: Install pinact.
       shell: bash
       run: |
-        version=v3.9.0
+        version=v4.1.0
         asset=pinact_linux_amd64.tar.gz
         bindir=$(mktemp -d)
         gh release download -R suzuki-shunsuke/pinact "$version" -p "$asset"
