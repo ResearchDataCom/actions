@@ -56,6 +56,11 @@ permissions.</dd>
 <dd>Builds a Python distribution via GNU Make and stores the results
 in a workflow artifact.</dd>
 
+<dt><a href="setup-bashbrew/action.yaml">setup-bashbrew</a></dt>
+<dd>Installs the
+<a href="https://docs.docker.com/docker-hub/repos/manage/trusted-content/official-images/">Docker Official Images</a>
+build tools.</dd>
+
 <dt><a href="sphinx-build/action.yml">sphinx-docs</a></dt>
 <dd>Generates versioned documentation in multiple formats from Sphinx
 sources via GNU Make and stores the results in a workflow
@@ -66,6 +71,8 @@ artifact.</dd>
 ## References
 
 [GitHub Actions Variables Reference](https://docs.github.com/en/actions/reference/workflows-and-actions/variables)
+
+[How to use env vars or constants in composite actions?](https://github.com/orgs/community/discussions/51280)
 
 [Migrate Git from SHA-1 to a stronger hash function](https://git-scm.com/docs/hash-function-transition)
 

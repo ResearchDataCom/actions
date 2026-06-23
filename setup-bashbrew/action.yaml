@@ -1,0 +1,37 @@
+name: Set up bashbrew et al.
+description: >-
+  Install the
+  [Docker Official Images](https://docs.docker.com/docker-hub/repos/manage/trusted-content/official-images/)
+  build tools.
+
+runs:
+  using: composite
+  steps:
+    - name: Install the Go programming language.
+      uses: actions/setup-go@4a3601121dd01d1626a1e23e37211e3254c1c06c # v6.4.0
+      with:
+        go-version: '1.26'
+    - name: Install our Bashbrew fork (requires Go).
+      id: bashbrew
+      shell: bash
+      run: |
+        BASHBREW="$(mktemp -d)"
+        git clone --depth=1 --revision=904f03cd8bc7830256269b334a2ba443d8c28b6b https://github.com/ResearchDataCom/bashbrew "${BASHBREW}"
+        cd "${BASHBREW}"
+        ./bashbrew.sh --version > /dev/null
+        echo "${BASHBREW}/bin" >> "${GITHUB_PATH}"
+        echo "scripts=${BASHBREW}/scripts" >> "${GITHUB_OUTPUT}"
+    - name: Install manifest-tool (requires Go).
+      shell: bash
+      run: |
+        MANIFEST_TOOL="$(mktemp -d)"
+        git clone --depth=1 --revision=b2e25427f2d1c4af2c52249eefa1afa58f662487 https://github.com/estesp/manifest-tool "${MANIFEST_TOOL}"
+        cd "${MANIFEST_TOOL}"
+        make binary
+        echo "${MANIFEST_TOOL}" >> "${GITHUB_PATH}"
+
+outputs:
+  scripts:
+    description: >-
+      Where to find supplementary utilities and template files.
+    value: ${{ steps.bashbrew.outputs.scripts }}
