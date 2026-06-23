@@ -1,3 +1,19 @@
+## v2.3.0 (2026-06-23)
+
+### Bug Fixes
+
+- **python-freeze**: update pip to v26.1.2
+- **pre-commit**: update pinact to v4.1.0
+- **pre-commit**: update TFLint to v0.63.1
+- **pre-commit**: update OpenTofu to v1.12.3
+- **pre-commit**: update pre-commit to v4.6.0
+- **pre-commit**: update Trivy to v0.71.2
+- update actions/checkout to v6.0.3
+
+### New Features
+
+- **setup-bashbrew**: install the Docker Official Images build tools
+
 ## v2.2.0 (2026-06-02)
 
 ### Bug Fixes

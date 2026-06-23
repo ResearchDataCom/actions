@@ -3,7 +3,7 @@ bump_message = "bump: release version $new_version"
 name = "cz_conventional_commits"
 tag_format = "v$version"
 version_scheme = "semver2"
-version = "2.2.0"
+version = "2.3.0"
 update_changelog_on_bump = true
 
 [tool.commitizen.change_type_map]
