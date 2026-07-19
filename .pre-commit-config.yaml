@@ -9,7 +9,7 @@ repos:
   # Ensure commit messages use Conventional Commits formatting;
   # cf. .cz.toml.
   - repo: https://github.com/commitizen-tools/commitizen
-    rev: v4.13.10
+    rev: 55d62f82df48e68346132837311d6103617a4e69  # frozen: v4.16.5
     hooks:
       - id: commitizen
 
