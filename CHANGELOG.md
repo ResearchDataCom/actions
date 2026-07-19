@@ -1,3 +1,22 @@
+## v3.0.0 (2026-07-19)
+
+### Bug Fixes
+
+- freeze rhysd/actionlint at v1.7.12
+- freeze koalaman/shellcheck-precommit at v0.11.0
+- freeze pre-commit/pre-commit-hooks at v6.0.0
+- update commitizen-tools/commitizen to v4.16.5
+- **pre-commit**: update actions/cache to v6.1.0
+- **pre-commit**: update terraform-linters/setup-tflint to v6.3.0
+- **pre-commit**: update opentofu/setup-opentofu to v2.0.2
+- **setup-bashbrew**: update actions/setup-go to v6.5.0
+- update actions/setup-python to v6.3.0
+- update actions/checkout to v7.0.0
+
+### New Features
+
+- dedicate this work to the public domain
+
 ## v2.3.0 (2026-06-23)
 
 ### Bug Fixes
