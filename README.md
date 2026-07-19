@@ -1,8 +1,10 @@
-# GitHub Actions Workflows
+# RDCT Actions Library
 
-Simplify project release engineering with actions that feature
-privilege separation, automate testing, facilitate reproducible
-builds, support matrix strategies, and mitigate supply chain attacks.
+Simplify project release engineering with
+[composite actions](https://docs.github.com/actions/tutorials/create-actions/create-a-composite-action)
+that feature privilege separation, automate testing, facilitate
+reproducible builds, support matrix strategies, and mitigate supply
+chain attacks.
 
 > [!NOTE]
 >
@@ -11,11 +13,10 @@ builds, support matrix strategies, and mitigate supply chain attacks.
 > refer to
 > [Sharing actions and workflows from your private repository](https://docs.github.com/en/actions/how-tos/reuse-automations/share-across-private-repositories).
 
-[_Good DevOps Practice_](https://github.com/ResearchDataCom/good-devops-practice)
-describes the underlying methodology and recommended tooling in
-greater detail.  For an example of how to use these in GitHub Actions
-workflows, refer to the
-[python-template continuous integration (CI) workflow](https://github.com/ResearchDataCom/good-devops-practice/blob/main/python-template/%7B%7B%20cookiecutter.package_slug%20%7D%7D/.github/workflows/ci.yaml).
+[_Good DevOps Practice_](https://devops.rdctdev.us/) describes the
+underlying methodology and recommended tooling in greater detail.  For
+examples of how to use these actions, refer to the
+[RDCT Templates Library](https://github.com/ResearchDataCom/templates).
 
 ## Available Actions
 
