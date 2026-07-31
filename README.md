@@ -30,6 +30,11 @@ definitions for additional details.
 tags the new release; requires <code>contents: write</code>
 permissions.</dd>
 
+<dt><a href="fixup-act/action.yaml">fixup-act</a></dt>
+<dd>Works around the limitations of or workflow compatibility issues
+with <a href="https://nektosact.com/">act</a>, a local GitHub Actions
+runner.  Guard invocations with <code>if: ${{ env.ACT }}</code>.</dd>
+
 <dt><a href="pre-commit/action.yaml">pre-commit</a></dt>
 <dd>Checks code syntax/style using the configured pre-commit
 hooks.</dd>

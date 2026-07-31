@@ -1,0 +1,44 @@
+# This work is marked CC0 1.0 Universal.  To view a copy of this mark,
+# visit https://creativecommons.org/publicdomain/zero/1.0/.
+
+name: Fix workflows run via act.
+description: >-
+  Work around the limitations of or workflow compatibility issues with
+  [act](https://nektosact.com/), a local GitHub Actions runner.  Guard
+  invocations with `if: ${{ env.ACT }}`.
+
+runs:
+  using: composite
+  steps:
+    - name: Fix the program search list (cf. nektos/act#107).
+      shell: bash
+      run: |
+        ACT_TOOL_PATHS=$( \
+            cat /etc/environment \
+            | grep "PATH=" \
+            | sed -e 's/PATH=//' \
+            | tr ":" "\n" \
+            | grep "${ACT_TOOLSDIRECTORY}" \
+            | tr '\n' ':' \
+            | tr -d ':' \
+        )
+        echo "${ACT_TOOL_PATHS}" >> "$GITHUB_PATH"
+    - name: Install the GitHub CLI.
+      shell: bash -Eeuo pipefail -x {0}
+      run: |
+        version="2.97.0"
+        url="https://github.com/cli/cli/releases/download"
+        dest="/opt/gh/bin"
+        arch=`arch`
+        case $arch in \
+            aarch64) arch=amd64;; \
+            x86_64) arch=amd64;; \
+        esac
+        plat=`uname | tr '[[:upper:]]' '[[:lower:]]'`
+        case $plat in \
+            darwin) plat=macOS;; \
+        esac
+        mkdir -p -m 755 "$dest"
+        curl -L "$url/v${version}/gh_${version}_${plat}_${arch}.tar.gz" \
+        | tar -C "$dest" --strip-components=2 --wildcards -xzf - "*/bin/gh"
+        echo "$dest" >> "$GITHUB_PATH"
