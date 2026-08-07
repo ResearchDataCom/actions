@@ -22,6 +22,12 @@ inputs:
 runs:
   using: composite
   steps:
+    - if: ${{ !inputs.artifact-name }}
+      name: Validate inputs.
+      shell: bash
+      run: |
+        echo The artifact-name input is REQUIRED.
+        exit 1
     - name: Download OpenTofu modules and providers.
       shell: bash
       run: tofu init

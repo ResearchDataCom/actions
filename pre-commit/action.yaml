@@ -62,6 +62,12 @@ inputs:
 runs:
   using: composite
   steps:
+    - name: Validate inputs.
+      if: ${{ !inputs.python-version }}
+      shell: bash
+      run: |
+        echo The python-version input is REQUIRED.
+        exit 1
     - name: Clone this GitHub repository (just the latest commit).
       uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
     - name: Install Python ${{ inputs.python-version }}.

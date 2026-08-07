@@ -16,18 +16,18 @@ The calling GitHub Actions workflow job **MUST** have permission to
 
 ## Inputs
 
-:artifact-paths: (***required***)
+:tag: (***required***)
+
+  Specify the version tag of the release, e.g., `"v1.2.3"`.
+
+  ---
+
+:artifact-paths: (default value: `""`)
 
   List the files to upload as part of the release, separated by
   commas; supports globbing.  For example,
   `"release.tar.gz,foo/*.txt"` would upload `release.tar.gz` plus all
   of the text files in the `foo/` directory as part of the release.
-
-  ---
-
-:tag: (***required***)
-
-  Specify the version tag of the release, e.g., `"v1.2.3"`.
 
   ---
 
