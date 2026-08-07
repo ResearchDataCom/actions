@@ -1,0 +1,32 @@
+{#-
+
+This work is marked CC0 1.0 Universal.  To view a copy of this mark,
+visit https://creativecommons.org/publicdomain/zero/1.0/.
+
+-#}
+{%- if current_version %}
+<div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Versions">
+  <div class="bd-toc-item navbar-nav">
+    <ul class="nav bd-sidenav">
+      <li class="caption has-children"><strong>{{ _('Version') }}:</strong> {{ current_version }}
+      {%- if versions|length > 1 -%}
+      <details><summary><span class="toctree-toggle" role="presentation"><svg class="svg-inline--fa fa-chevron-down" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-down" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"></path></svg><!-- <i class="fa-solid fa-chevron-down"></i> Font Awesome fontawesome.com --></span></summary>
+      {%- for v, ls in versions|items %}
+      <a href="../../{{ v }}/{{ ls[0] }}/index.html">{{ v }}</a>
+      {%- endfor %}
+      </details>
+      {%- endif -%}
+      </li>
+      <li class="caption has-children"><strong>{{ _('Language') }}:</strong> {{ current_language }}
+      {%- if versions[current_version]|length > 1 -%}
+      <details><summary><span class="toctree-toggle" role="presentation"><svg class="svg-inline--fa fa-chevron-down" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-down" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"></path></svg><!-- <i class="fa-solid fa-chevron-down"></i> Font Awesome fontawesome.com --></span></summary>
+      {%- for l in versions[current_version]|sort %}
+      <a href="../{{ l }}/index.html">{{ l }}</a>
+      {%- endfor %}
+      </details>
+      {%- endif -%}
+      </li>
+    </ul>
+  </div>
+</div>
+{%- endif %}

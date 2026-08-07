@@ -1,0 +1,137 @@
+% This work is marked CC0 1.0 Universal.  To view a copy of this mark,
+% visit https://creativecommons.org/publicdomain/zero/1.0/.
+
+@Misc{2026:tutorial,
+  author =    {GitHub Inc.},
+  title =     {Creating a composite action},
+  howpublished = {\url{https://docs.github.com/actions/tutorials/create-actions/create-a-composite-action}},
+  year =      2026,
+  note =      {Accessed: 2026-08-03},
+  annote =    {This guides a developer through the process of
+                  creating, packaging, and testing a composite action.
+                  Pay careful attention to its warnings, and make note
+                  of the limitations imposed on composite actions.}
+}
+
+@Misc{2026:variables,
+  author =    {GitHub Inc.},
+  title =     {{GitHub Actions} Variables Reference},
+  howpublished = {\url{https://docs.github.com/actions/reference/workflows-and-actions/variables}},
+  year =      2026,
+  note =      {Accessed: 2026-08-03},
+  annote =    {This documents the variables available within GitHub
+                  Actions workflows.  Consult this reference to
+                  determine whether a given variable can be accessed
+                  from a composite workflow or must be provided by an
+                  action's input.}
+}
+
+@Misc{2026:matrices,
+  author =    {GitHub Inc.},
+  title =     {Running variations of jobs in a workflow},
+  howpublished = {\url{https://docs.github.com/actions/how-tos/write-workflows/choose-what-workflows-do/run-job-variations}},
+  year =      2026,
+  note =      {Accessed: 2026-08-03},
+  annote =    {This explains how to parameterize a GitHub Actions
+                  job.}
+}
+
+@Misc{2026:security,
+  author =    {Greg Mohler and Kitty Chiu},
+  title =     {Securing {GitHub Actions} Workflows},
+  howpublished = {\url{https://learn.github.com/well-architected/application-security/recommendations/actions-security/}},
+  month =     {July},
+  year =      2026,
+  note =      {Accessed: 2026-08-03},
+  annote =    {Mohler and Chiu point out that ``CI/CD tools inherently
+                  provide remote code execution as a service'' and go
+                  on to suggest several ways to mitigate the
+                  corresponding risks.}
+}
+
+@Misc{2026:3rdparty,
+  author =    {GitHub Inc.},
+  title =     {Using third-party actions},
+  howpublished = {\url{https://docs.github.com/en/actions/reference/security/secure-use#using-third-party-actions}},
+  year =      2026,
+  note =      {Accessed: 2026-08-03},
+  annote =    {GitHub provides some guidance on how to use third-party
+                  actions safely.  In summary, pin to a commit object
+                  instead of a tag, and review the action's source
+                  code.}
+}
+
+@Misc{2023:varscope,
+  title =     {How to use env vars or constants in composite actions?},
+  howpublished = {\url{https://github.com/orgs/community/discussions/51280}},
+  month =     {March},
+  year =      2023,
+  note =      {Accessed: 2026-08-03},
+  annote =    {In composite actions, variable scope does not work like
+                  in a normal workflow.  Refer to the discussion for
+                  the specifics.}
+}
+
+@Misc{2025:revspec,
+  title =     {Specifying Revisions},
+  howpublished = {\url{https://git-scm.com/docs/git-rev-parse#_specifying_revisions}},
+  month =     {November},
+  year =      2025,
+  note =      {Accessed: 2026-08-03},
+  annote =    {Because Git tags are not guaranteed to be immutable, we
+                  pin actions to the corresponding commit objects.
+                  The \verb|git rev-parse| explains the various ways
+                  to name them.}
+}
+
+@Misc{2026:newhash,
+  title =     {Migrate {Git} from {SHA-1} to a stronger hash function},
+  howpublished = {\url{https://git-scm.com/docs/hash-function-transition}},
+  month =     {June},
+  year =      2026,
+  note =      {Accessed: 2026-08-03},
+  annote =    {Git uses a hardened SHA-1 hash function to name commit
+                  objects.  While migrating to SHA-256 is the upstream
+                  project's responsibility, we should be prepared to
+                  take advantage of the new hash function in our
+                  standards and practices.}
+}
+
+@Misc{2025:permissions,
+  author =    {Shreya Pohekar},
+  title =     {The Right Way to Handle Permissions in {GitHub
+                  Actions}: A Practical Guide to Staying Secure},
+  howpublished = {\url{https://shreyapohekar.com/blogs/the-right-way-to-handle-permissions-in-github-actions-a-practical-guide-to-staying-secure/}},
+  month =     {November},
+  year =      2025,
+  note =      {Accessed: 2026-08-03},
+  annote =    {Apply the principle of least privilege to GitHub
+                  Actions workflows as otherwise, attackers can mount
+                  supply chain attacks on one's projects.  This
+                  requires a careful understanding of how those
+                  permissions work.}
+}
+
+@Misc{pyversions,
+  author =    {Python Software Foundation},
+  title =     {Status of {Python} versions},
+  howpublished = {\url{https://devguide.python.org/versions/}},
+  note =      {Accessed: 2026-08-03},
+  annote =    {Standardize on the previous Python release.  For
+                  example, if Python 3.14 is the latest major version,
+                  target Python 3.13.}
+}
+
+@Misc{2025:cooldowns,
+  author =    {William Woodruff},
+  title =     {We should all be using dependency cooldowns},
+  howpublished = {\url{https://blog.yossarian.net/2025/11/21/We-should-all-be-using-dependency-cooldowns}},
+  month =     {November},
+  year =      2025,
+  note =      {Accessed: 2026-08-03},
+  annote =    {Dependency cooldowns are a cheap way to avoid many (but
+                  not all) supply chain attacks.  By waiting to update
+                  a dependency pin, one gives upstream developers and
+                  supply chain security vendors time to discover and
+                  stop an attack.}
+}

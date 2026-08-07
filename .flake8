@@ -1,0 +1,21 @@
+# This work is marked CC0 1.0 Universal.  To view a copy of this mark,
+# visit https://creativecommons.org/publicdomain/zero/1.0/.
+
+[flake8]
+max-line-length = 80
+extend-select =
+    # When using Black, the Flake8 documentation recommends using
+    # Bugbear's B950 check.
+    B950
+extend-ignore =
+    # B950 replaces the built-in E203, E501, and E701 checks.
+    E203, E501, E701,
+    # No new Python features **SHOULD** be in use.
+    FI10, FI11, FI12, FI13, FI14, FI15, FI16, FI17, FI18,
+    # Test code uses assertions by design.
+    S101,
+known-modules = PySAML2:[saml2],PyJWT:[jwt]
+
+# Local Variables:
+# mode: conf-unix
+# End:

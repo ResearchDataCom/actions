@@ -1,27 +1,39 @@
 # This work is marked CC0 1.0 Universal.  To view a copy of this mark,
 # visit https://creativecommons.org/publicdomain/zero/1.0/.
 
+# NOTE: Keep documentation in sync with docs/cz-bump.md.
+
 name: Release code using commitizen.
 description: >-
-  Determines the next version number, updates project metadata, and
-  tags the new release.  The calling GitHub Actions workflow job
-  **MUST** have permission to
+  Determine the next version number, update project metadata, and tag
+  the new release.  Store the new release in a
+  [GitHub Actions workflow artifact](https://docs.github.com/en/actions/concepts/workflows-and-actions/workflow-artifacts),
+  an immutable archive, for use by subsequent build and publish
+  actions.  The calling GitHub Actions workflow job **MUST** have
+  permission to
   [create or update file contents](https://docs.github.com/en/rest/repos/contents)
   (`contents: write`).
 
 inputs:
   artifact-name:
-    description: >-
-      The name of the immutable archive that will contain the release.
-    required: true
     default: release-artifacts
-  changelog-fragment:
     description: >-
-      The name of a Markdown document to be created by this action
-      that will contain release notes for the new version.  Disable by
-      setting this to the empty string (`""`).
-    required: true
+      This names the workflow artifact containing the release.
+      Disable artifact creation by setting
+      [a falsy value](https://docs.github.com/actions/reference/workflows-and-actions/expressions)
+      (`false`, `0`, `-0`, `""`, `''`, `null`, `~`).
+  changelog-fragment:
     default: body.md
+    description: >-
+      The action will save Markdown-formatted release notes for just
+      the new version in this file, which will be included in the
+      workflow artifact containing the release.  Do not specify the
+      name of the file containing the full release notes,
+      `CHANGELOG.md`.  Disable changelog fragment generation by
+      setting
+      [a falsy value](https://docs.github.com/actions/reference/workflows-and-actions/expressions)
+      (`false`, `0`, `-0`, `""`, `''`, `null`, `~`).  Note that this
+      only affects the generation of the fragment, not `CHANGELOG.md`.
 
 runs:
   using: composite
@@ -30,25 +42,27 @@ runs:
       uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
       with:
         fetch-depth: 0
-    - name: Tag the next release and summarize its changes.
-      id: cz
+    - id: cz
+      name: Tag the next release and summarize its changes.
       uses: commitizen-tools/commitizen-action@338bbd841b75aaee6bf5340e1fa12f6ab58ff9ff # 0.27.1
       with:
         changelog_increment_filename: ${{ inputs.changelog-fragment }}
         github_token: ${{ github.token }}
-    - name: Upload the release to artifact storage.
-      if: inputs.artifact-name
+    - if: inputs.artifact-name
+      name: Upload the release to artifact storage.
       uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
       with:
-        name: ${{ inputs.artifact-name }}
-        path: .
         if-no-files-found: error
         include-hidden-files: true
+        name: ${{ inputs.artifact-name }}
+        path: .
 
 outputs:
   released:
-    description: Signals whether this made a release.
+    description: >-
+      This Boolean value signals whether the action tagged a new
+      release.
     value: ${{ steps.cz.outputs.previous_version != steps.cz.outputs.next_version }}
   tag:
-    description: The Git tag corresponding to the release.
+    description: This Git tag corresponds to the new release.
     value: v${{ steps.cz.outputs.next_version }}

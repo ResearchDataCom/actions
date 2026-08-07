@@ -1,0 +1,111 @@
+# This work is marked CC0 1.0 Universal.  To view a copy of this mark,
+# visit https://creativecommons.org/publicdomain/zero/1.0/.
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+# cf. tool.setuptools.package-dir section below
+name = "actions"
+description = "Simplify project release engineering with composite actions that feature privilege separation, automate testing, facilitate reproducible builds, support matrix strategies, and mitigate supply chain attacks."
+version = "3.0.0"
+# cf. https://www.bitecode.dev/p/relieving-your-python-packaging-pain,
+# https://devguide.python.org/versions/
+requires-python = ">=3.12"
+# cf. https://pypi.org/classifiers/
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Environment :: Other Environment",
+    "Intended Audience :: Developers",
+    "Intended Audience :: System Administrators",
+    "License :: Public Domain",
+    "Operating System :: MacOS :: MacOS X",
+    "Operating System :: Microsoft :: Windows",
+    "Operating System :: POSIX :: Linux",
+    "Programming Language :: Other",
+    "Topic :: Security",
+    "Topic :: Software Development :: Build Tools",
+    "Topic :: Software Development :: Documentation",
+    "Topic :: Software Development :: Testing",
+    "Topic :: Software Development :: Version Control",
+    "Topic :: System :: Installation/Setup",
+]
+# To avoid unnecessary developer overhead, only set version
+# constraints to address capability, compatibility, or security
+# issues, and avoid pinning specific versions if possible.
+dependencies = []
+
+[project.optional-dependencies]
+dev = [
+    "autopep8",
+    "black",
+    "build",
+    "commitizen",
+    "id",
+    "ipdb",
+    "isort",
+    "jedi",
+    "matplotlib",
+    # https://github.com/executablebooks/mdit-py-plugins/pull/65
+    "mdit-py-plugins>0.3.4",
+    "myst-parser[linkify,rtd]",
+    "pip<26.2",                 # cf. jazzband/pip-tools#2437
+    "pip-tools",
+    "pre-commit",
+    "pystemmer",
+    "rinohtype",
+    "sphinxcontrib-bibtex",
+    "sphinxcontrib-svg2pdfconverter[CairoSVG]",
+    "sphinx-autodoc2[cli]",
+    "sphinx-book-theme==1.2.0", # cf. executablebooks/sphinx-book-theme#986
+    "sphinx-intl",
+    "sphobjinv",
+    "twine",
+    "yapf",
+    "yq",
+    # Keep the list of flake8 plugins in sync with
+    # .pre-commit-config.yaml.
+    "dlint",
+    "flake8-bandit",
+    "flake8-bugbear",
+    "flake8-comprehensions",
+    "flake8-docstrings",
+    "flake8-eradicate",
+    "flake8-fixme",
+    "flake8-future-import",
+    "flake8-pytest-style",
+    "flake8-requirements",
+]
+
+[project.readme]
+file = "README.md"
+content-type = "text/markdown"
+
+[tool.commitizen]
+bump_message = "bump: release version $new_version"
+name = "cz_conventional_commits"
+tag_format = "v$version"
+version_scheme = "semver2"
+version_provider = "pep621"
+update_changelog_on_bump = true
+
+[tool.commitizen.change_type_map]
+build = "Build System"
+chore = "Miscellaneous"
+ci = "CI/CD Workflow"
+docs = "Documentation"
+feat = "New Features"
+fix = "Bug Fixes"
+perf = "Performance Improvements"
+refactor = "Refactoring"
+style = "Style"
+test = "Testing"
+
+[tool.isort]
+profile = "black"
+skip_gitignore = true
+
+[tool.setuptools]
+packages = []
+py-modules = []
