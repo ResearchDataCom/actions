@@ -130,6 +130,7 @@ contributing
 pre-commit
 cz-bump
 publish-github
+sphinx-build
 publish-ghpages
 ```
 
@@ -145,6 +146,8 @@ opentofu-freeze
 :caption: Python
 
 python-freeze
+python-test
+python-build
 ```
 
 ```{toctree}

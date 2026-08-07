@@ -1,35 +1,50 @@
 # This work is marked CC0 1.0 Universal.  To view a copy of this mark,
 # visit https://creativecommons.org/publicdomain/zero/1.0/.
 
+# NOTE: Keep documentation in sync with docs/python-test.md.
+
 name: Test Python code.
 description: >-
-  Runs pytest via GNU Make.  Installs Python along with matching
-  versions of Google Chrome and ChromeDriver for use with Selenium.
-  The makefile targets `build-deps`, which runs as the superuser, and
-  `test` **MUST** handle other test dependencies.  Supports
-  [matrix strategies](https://docs.github.com/en/actions/how-tos/write-workflows/choose-what-workflows-do/run-job-variations).
+  :::{admonition} Guidance
+
+  Developers **MUST** run this action in a dedicated, unprivileged
+  workflow job to limit the risk of a supply chain attack.
+
+  :::
+
+  Run tests via GNU Make.  This action installs Python along with
+  matching versions of Google Chrome and ChromeDriver for use with
+  Selenium.  The makefile targets `build-deps` (which runs as the
+  superuser) and `test` handle other test dependencies.
 
 inputs:
   python-version:
-    description: The version of Python with which to test.
     required: true
     default: "3.13"
-  requirements:
     description: >-
-      The name of a workflow artifact containing Python package
-      dependency pins.
-    default: pip-compile-artifacts
+      Specify the version of Python with which to run pytest.
+  requirements:
+    default: true
+    deprecationMessage: >-
+      This input will be removed after 2026-12-31.  The action now
+      downloads all available workflow artifacts by default.  Use the
+      `skip-artifact-downloads` input to change this behavior.
+  skip-artifact-downloads:
+    default: false
+    description: >-
+      Set this to `true` when managing the contents of the runner's
+      working directory outside of this action.
 
 runs:
   using: composite
   steps:
     - name: Clone this GitHub repository (just the latest commit).
       uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
-    - name: Download the Python package dependency pins.
-      if: inputs.requirements
+    - if: ${{ !inputs.skip-artifact-downloads }}
+      name: Download the Python package dependency pins.
       uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8.0.1
       with:
-        name: ${{ inputs.requirements }}
+        merge-multiple: true
     - name: Install Python ${{ inputs.python-version }}.
       uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
       with:

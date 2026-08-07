@@ -85,7 +85,7 @@ jobs:
           name: release-artifacts
       - uses: ./sphinx-build
         with:
-          requirements: null
+          skip-artifact-downloads: true
 
   ghpages:
     needs:
