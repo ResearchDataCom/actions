@@ -2,10 +2,6 @@
 #
 # This work is marked CC0 1.0 Universal.  To view a copy of this mark,
 # visit https://creativecommons.org/publicdomain/zero/1.0/.
-#
-# After bumping these version pins, remove the requirements.txt file
-# found in this directory, and then regenerate it with the command
-# `pip-compile --generate-hashes --allow-unsafe`.  For best results,
-# use the same version of Python to which the action defaults.
 
-pip-tools==7.5.3
+pip<26.2                        # cf. jazzband/pip-tools#2437
+pip-tools
