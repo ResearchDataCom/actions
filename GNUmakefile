@@ -124,6 +124,9 @@ build-deps:
 		$(eval distro = $(or $(shell lsb_release -is))))
 	$(if $(filter Debian Ubuntu, $(distro)), \
 		sudo sed -i '/deb-src/s/^# //' /etc/apt/sources.list; \
+		sudo find /etc/apt/sources.list.d -name '*.sources' -exec \
+			sed -i '/Types: deb$$/s/$$/ deb-src/' '{}' \; \
+		; \
 		sudo apt-get update; \
 		sudo DEBIAN_FRONTEND=noninteractive \
 			apt-get install -y --no-install-recommends \
