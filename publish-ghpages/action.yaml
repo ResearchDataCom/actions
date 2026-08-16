@@ -25,13 +25,11 @@ inputs:
       Provide or override the
       [API token used by the GitHub Actions workflow](https://docs.github.com/actions/concepts/security/github_token).
   cname:
-    default: null
     description: >-
       Set a
       [custom domain](https://docs.github.com/pages/configuring-a-custom-domain-for-your-github-pages-site)
       for the GitHub Pages site.
   skip-artifact-downloads:
-    default: false
     description: >-
       Set this to `true` when managing the contents of the runner's
       working directory outside of this action.

@@ -37,10 +37,8 @@ non-action version pins in
 
   ---
 
-:access-app-id: (default value: `null`)
-
-  Provide the app ID of a GitHub App used to access private
-  repositories.  When
+:access-app-id: Provide the app ID of a GitHub App used to access
+  private repositories.  When
   [registering the app](https://docs.github.com/en/apps/creating-github-apps/registering-a-github-app/registering-a-github-app)
   in the organization, disable webhook functionality and grant
   **read-only**
@@ -52,16 +50,12 @@ non-action version pins in
 
   ---
 
-:access-key: (default value: `null`)
-
-  Log into the GitHub App used to access private repositories with
-  this
+:access-key: Log into the GitHub App used to access private
+  repositories with this
   [private key](https://docs.github.com/en/apps/creating-github-apps/authenticating-with-a-github-app/managing-private-keys-for-github-apps).
 
   ---
 
-:owner: (default value: `null`)
-
-  Access private repositories owned by this GitHub account or
+:owner: Access private repositories owned by this GitHub account or
   organization, overriding
   [github.repository_owner](https://docs.github.com/en/actions/reference/workflows-and-actions/contexts#github-context).

@@ -36,7 +36,6 @@ inputs:
       [a falsy value](https://docs.github.com/actions/reference/workflows-and-actions/expressions)
       (`false`, `0`, `-0`, `""`, `''`, `null`, `~`).
   skip-artifact-downloads:
-    default: false
     description: >-
       Set this to `true` when managing the contents of the runner's
       working directory outside of this action.

@@ -42,7 +42,5 @@ The calling GitHub Actions workflow job **MUST** have permission to
 
   ---
 
-:skip-artifact-downloads: (default value: `false`)
-
-  Set this to `true` when managing the contents of the runner's
-  working directory outside of this action.
+:skip-artifact-downloads: Set this to `true` when managing the
+  contents of the runner's working directory outside of this action.

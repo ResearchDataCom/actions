@@ -52,19 +52,16 @@ inputs:
       [a falsy value](https://docs.github.com/actions/reference/workflows-and-actions/expressions)
       (`false`, `0`, `-0`, `""`, `''`, `null`, `~`).
   release:
-    default: true
     deprecationMessage: >-
       This input will be removed after 2026-12-31.  The action now
       downloads all available workflow artifacts by default.  Use the
       `skip-artifact-downloads` input to change this behavior.
   requirements:
-    default: true
     deprecationMessage: >-
       This input will be removed after 2026-12-31.  The action now
       downloads all available workflow artifacts by default.  Use the
       `skip-artifact-downloads` input to change this behavior.
   skip-artifact-downloads:
-    default: false
     description: >-
       Set this to `true` when managing the contents of the runner's
       working directory outside of this action.

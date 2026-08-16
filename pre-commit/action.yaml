@@ -34,7 +34,6 @@ inputs:
     description: >-
       Specify the version of Python with which to run pre-commit.
   access-app-id:
-    default: ~
     description: >-
       Provide the app ID of a GitHub App used to access private
       repositories.  When
@@ -47,13 +46,11 @@ inputs:
       and install the app, giving it access to selected repositories
       as appropriate.
   access-key:
-    default: ~
     description: >-
       Log into the GitHub App used to access private repositories with
       this
       [private key](https://docs.github.com/en/apps/creating-github-apps/authenticating-with-a-github-app/managing-private-keys-for-github-apps).
   owner:
-    default: ~
     description: >-
       Access private repositories owned by this GitHub account or
       organization, overriding
