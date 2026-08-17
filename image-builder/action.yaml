@@ -1,0 +1,75 @@
+# This work is marked CC0 1.0 Universal.  To view a copy of this mark,
+# visit https://creativecommons.org/publicdomain/zero/1.0/.
+name: image-builder
+description: >-
+  Builds, scans, and stores docker images in the GHCR repo associated with the
+  Github Org this is run under.
+
+inputs:
+  trivy-severity:
+    description: >-
+      Severity required for the vulnerability scan to fail.
+      See [these docs](https://trivy.dev/docs/latest/scanner/vulnerability/)
+    required: true
+    default: 'CRITICAL,HIGH'
+  image-version:
+    description: >-
+      Version tag for the created container image.
+      Should be passed via a matrix strategy or as single version.
+    required: true
+  github-token:
+    description: >-
+      Github token to allow access to GHCR repo.
+      Needs to be passed because composite actions can't access secrets.
+    required: true
+
+runs:
+  using: composite
+  steps:
+    # This step is only needed because github actions doesn't support a way to manipulate strings
+    - name: Ensure Org is lowercase
+      id: lower-repo
+      shell: bash
+      run: |
+        echo "lowerrepo=${GITHUB_REPOSITORY,,}" >> "$GITHUB_OUTPUT"
+    - name: Check out this GitHub repository.
+      uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+    - name: Setup Docker Buildx
+      uses: docker/setup-buildx-action@bb05f3f5519dd87d3ba754cc423b652a5edd6d2c # v4.2.0
+    - name: Log into the GitHub Container Registry.
+      uses: docker/login-action@dbcb813823bdd20940b903addbd779551569679f # v4.6.0
+      with:
+        registry: ghcr.io
+        username: ${{ github.actor }}
+        password: ${{ inputs.github-token }}
+    - name: Build images from library
+      id: image-build
+      shell: bash
+      run: |
+        docker buildx build ./${{ inputs.image-version }} --load --tag ghcr.io/${GITHUB_REPOSITORY,,}:${{ inputs.image-version }}
+    - name: Generate Trivy Vulnerability Report
+      uses: aquasecurity/trivy-action@ed142fd0673e97e23eac54620cfb913e5ce36c25 # v0.36.0
+      with:
+        scan-type: 'image'
+        image-ref: "ghcr.io/${{ steps.lower-repo.outputs.lowerrepo }}:${{ inputs.image-version }}"
+        format: 'table'
+        exit-code: '1'
+        ignore-unfixed: true
+        vuln-type: 'os,library'
+        severity: ${{ inputs.trivy-severity }}
+    - name: Generate Trivy SBOM
+      uses: aquasecurity/trivy-action@ed142fd0673e97e23eac54620cfb913e5ce36c25 # v0.36.0
+      with:
+        scan-type: 'image'
+        image-ref: "ghcr.io/${{ steps.lower-repo.outputs.lowerrepo }}:${{ inputs.image-version }}"
+        format: 'spdx'
+    - name: Run Tests
+      id: run-tests
+      shell: bash
+      run: |
+        echo "TODO Implement"
+    - name: Push images to GHCR
+      id: image-push
+      shell: bash
+      run: |
+        docker push ghcr.io/${GITHUB_REPOSITORY,,}:${{ inputs.image-version }}
