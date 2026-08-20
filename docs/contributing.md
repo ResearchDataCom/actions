@@ -73,36 +73,56 @@ This project follows these code styles:
 
 For actions:
 
-- Name the file `actions.yaml`, not `actions.yml`.
+- Name the folder containing a composite action after the primary
+  tool, e.g., [`pre-commit/`](github:pre-commit/), the
+  [runtime](wiki:Runtime_system) and operation, e.g.,
+  [`sphinx-build/`](github:sphinx-build/), or in special cases, the
+  scenario and target, e.g.,
+  [`setup-bashbrew/`](github:setup-bashbrew/).
+
+- Define the composite action in a file named `actions.yaml`, not
+  `actions.yml`.
 
 - Specify top-level keys in the order `name`, `description`, `inputs`,
   `runs`, and `outputs`.  Group the `name` and `description` keys.
-  Put a blank line between the rest.
+  Put a single blank line between the rest.
 
-- Name each action or step with a short sentence in the imperative
-  mood that succinctly explains what it does.  Format names using
-  plain text.
+- Name the action and each step with a short sentence in the
+  imperative mood that succinctly explains what the action or that
+  step does.  Format names using plain text.
 
-- Describe each action or step in detail.  Format descriptions using
+- For each input, list fields in the order `required`, `default`,
+  `description`, and `deprecationMessage`.  Specify fields only when
+  overriding default values.  Sort inputs first by whether they are
+  required and then alphabetically by input name.
+
+- For each output, list fields in the order `description` and `value`.
+  Sort outputs by name.
+
+- Describe the action, its inputs, and its outputs in detail.  Format
+  descriptions using
   [MyST Markdown](https://myst-parser.readthedocs.io/).
 
-- Sort inputs first by whether they are required and then
-  alphabetically by input name.  For each input, specify in order
-  whether it is required, the default value (use `null` or `~` for an
-  optional input), and its description.
+- If specified, the
+  [default value of an input parameter](https://docs.github.com/actions/reference/workflows-and-actions/metadata-syntax#inputsinput_iddefault)
+  is a string.  The GitHub Actions runner will
+  [cast other value types to a string](https://stackoverflow.com/a/76294014).
+  For example, specifying a default value of `false` will result in
+  the input parameter defaulting to `"false"`,
+  [a truthy value](https://docs.github.com/actions/reference/workflows-and-actions/expressions).
 
-  The GitHub Actions runner
+- The GitHub Actions runner
   [does not check for missing required inputs](https://github.com/actions/runner/issues/1070).
   Doing so is the responsibility of the action itself.
 
-- Sort outputs by name.
+- Manually create a corresponding entry in the documentation for each
+  action.  List inputs and outputs in the same order as in the action,
+  and keep documentation in sync with the action, input, and output
+  descriptions.
 
-Manually create a corresponding entry in the documentation for each
-action.  Use [field lists](inv:myst#syntax/fieldlists) for inputs and
-outputs, with a horizontal rule at the end of each definition to
-separate entries a little without breaking apart the list.  List
-inputs and outputs in the same order as in the action, and keep
-documentation in sync with the action, input, and output descriptions.
+- Use [field lists](inv:myst#syntax/fieldlists) for inputs and
+  outputs, with a horizontal rule at the end of each definition to
+  separate entries a little without breaking apart the list.
 
 ## Commit Messages
 
