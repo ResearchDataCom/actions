@@ -7,14 +7,17 @@ visit https://creativecommons.org/publicdomain/zero/1.0/.
 
 # Contribution Guidelines
 
-This project implements
-[Semantic Versioning 2.0.0](https://semver.org/spec/v2.0.0.html) using
-[Conventional Commits 1.0.0](https://www.conventionalcommits.org/en/v1.0.0/).
-The project uses
-[Git feature (topic) branches](https://www.atlassian.com/git/tutorials/comparing-workflows/feature-branch-workflow)
-to maintain a [linear commit history](https://archive.is/VpWTs).
-Changes must be self-contained.  Please rebase changes on the latest
-HEAD of the main branch before submitting them for review as a
+The project practices [test-driven development](https://tdd.mooc.fi/)
+in
+[Git feature (topic) branches](https://www.atlassian.com/git/tutorials/comparing-workflows/feature-branch-workflow),
+using
+[Conventional Commits 1.0.0](https://www.conventionalcommits.org/en/v1.0.0/)
+to implement
+[Semantic Versioning 2.0.0](https://semver.org/spec/v2.0.0.html).
+Please maintain a [linear commit history](https://archive.is/VpWTs) by
+rebasing self-contained, buildable changes (with updated tests and
+documentation) on the latest HEAD of the main branch before submitting
+them for review as a
 [GitHub pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests).
 
 Mitigate supply chain attacks by
@@ -34,8 +37,9 @@ specify the second most recent release, e.g., Python 3.13 if Python
 3.14 is the latest release.  Remember to check the release notes for
 breaking changes.
 
-A commit's scope **SHOULD** be the name of the action, e.g.,
-`pre-commit`.  Changes covering multiple scopes or changes not
-specific to one scope **MUST NOT** specify a scope.
+Because actions interface with one another (albeit indirectly, via
+workflow artifacts or output/input conventions), commit scopes follow
+actions' base names, e.g., `pre-commit`, not `actions/pre-commit`, nor
+`ResearchDataCom/actions/pre-commit`.
 
 ### [Refer to the detailed contribution guidelines for more information.](https://docs.rdctdev.us/actions)

@@ -112,7 +112,7 @@ publishing follows the same standards and practices described herein.
 This document contains three major sections.  The frontmatter
 introduces the project.  The main body of the work explains how to use
 the composite actions included in this release of the project.
-Appendicies organize key reference materials.
+Appendices organize key reference materials.
 
 ```{toctree}
 :hidden:
