@@ -136,6 +136,14 @@ publish-ghpages
 
 ```{toctree}
 :hidden:
+:caption: Docker
+
+setup-bashbrew
+bashbrew-jobs
+```
+
+```{toctree}
+:hidden:
 :caption: OpenTofu
 
 opentofu-freeze
@@ -155,7 +163,6 @@ python-build
 :caption: Miscellaneous
 
 fixup-act
-setup-bashbrew
 ```
 
 ```{toctree}

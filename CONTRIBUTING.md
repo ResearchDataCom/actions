@@ -37,7 +37,7 @@ specify the second most recent release, e.g., Python 3.13 if Python
 3.14 is the latest release.  Remember to check the release notes for
 breaking changes.
 
-Because actions interface with one another (albeit indirectly, via
+Because actions interface with one another (usually indirectly, via
 workflow artifacts or output/input conventions), commit scopes follow
 actions' base names, e.g., `pre-commit`, not `actions/pre-commit`, nor
 `ResearchDataCom/actions/pre-commit`.

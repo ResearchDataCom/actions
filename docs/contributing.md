@@ -168,7 +168,7 @@ property references, and unit tests throughout the project.  The
 commit scope tells reviewers where to focus their analysis.  In change
 logs, commit scopes help sponsors understand the structure of the work
 going into fixes, features, or breaking changes.  Because actions
-interface with one another (albeit indirectly, via workflow artifacts
+interface with one another (usually indirectly, via workflow artifacts
 or output/input conventions), commit scopes follow actions' base
 names, e.g., `pre-commit`, not `actions/pre-commit`, nor
 `ResearchDataCom/actions/pre-commit`.
