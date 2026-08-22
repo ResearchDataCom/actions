@@ -140,6 +140,7 @@ publish-ghpages
 
 setup-bashbrew
 bashbrew-jobs
+bashbrew-build
 ```
 
 ```{toctree}
