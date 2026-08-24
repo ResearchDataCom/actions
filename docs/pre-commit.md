@@ -1,6 +1,6 @@
 % This work is marked CC0 1.0 Universal.  To view a copy of this mark,
 % visit https://creativecommons.org/publicdomain/zero/1.0/.
-
+%
 % NOTE: Keep documentation in sync with pre-commit/action.yaml.
 
 # pre-commit
@@ -27,7 +27,7 @@ regenerate it with the command `pip-compile --generate-hashes
 --allow-unsafe --uploaded-prior-to=P7D`, run from the
 [pre-commit/](github:pre-commit/) directory.  Update the other
 non-action version pins in
-[pre-commit/actions.yaml](github:pre-commit/actions.yaml).
+[pre-commit/action.yaml](github:pre-commit/action.yaml).
 
 ## Inputs
 

@@ -80,8 +80,8 @@ For actions:
   scenario and target, e.g.,
   [`setup-bashbrew/`](github:setup-bashbrew/).
 
-- Define the composite action in a file named `actions.yaml`, not
-  `actions.yml`.
+- Define the composite action in a file named `action.yaml`, not
+  `action.yml`.
 
 - Specify top-level keys in the order `name`, `description`, `inputs`,
   `runs`, and `outputs`.  Group the `name` and `description` keys.
@@ -107,8 +107,8 @@ For actions:
   [default value of an input parameter](https://docs.github.com/actions/reference/workflows-and-actions/metadata-syntax#inputsinput_iddefault)
   is a string.  The GitHub Actions runner will
   [cast other value types to a string](https://stackoverflow.com/a/76294014).
-  For example, specifying a default value of `false` will result in
-  the input parameter defaulting to `"false"`,
+  For example, specifying a default value of `false` results in the
+  input parameter defaulting to `"false"`,
   [a truthy value](https://docs.github.com/actions/reference/workflows-and-actions/expressions).
 
 - The GitHub Actions runner
