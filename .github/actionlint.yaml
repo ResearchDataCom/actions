@@ -1,0 +1,13 @@
+# This work is marked CC0 1.0 Universal.  To view a copy of this mark,
+# visit https://creativecommons.org/publicdomain/zero/1.0/.
+
+# Unfortunately, actionlint v1.7.12 does not support the new
+# `$/{filename}` syntax for reusable workflow calls in the same
+# repository; cf. https://github.com/orgs/community/discussions/41927,
+# https://github.com/rhysd/actionlint/issues/711#issuecomment-5136214696,
+# https://docs.github.com/actions/how-tos/reuse-automations/reuse-workflows#calling-a-reusable-workflow.
+paths:
+  .github/workflows/**/*.{yml,yaml}:
+    ignore:
+      - reusable workflow call "\$/.+" at "uses" is not following the format
+      - specifying action "\$/.+" in invalid format because ref is missing
