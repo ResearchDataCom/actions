@@ -1,0 +1,12 @@
+{{- $e := .TagEntry -}}
+{{- $arch := $e.HasArchitecture arch | ternary arch ($e.Architectures | first) -}}
+{{- "{" }}
+    "name": {{ json ($e.Tags | first) -}},
+    "tags": {{ json ($.Tags namespace false $e) -}},
+    "directory": {{ json ($e.ArchDirectory $arch) -}},
+    "file": {{ json ($e.ArchFile $arch) -}},
+    "builder": {{ json ($e.ArchBuilder $arch) -}},
+    "constraints": {{ json $e.Constraints -}},
+    "froms": {{ json ($.ArchDockerFroms $arch $e) -}},
+    "platform": {{ json (ociPlatform $arch).String }}
+{{ "}" -}}
