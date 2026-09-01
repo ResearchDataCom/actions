@@ -1,3 +1,31 @@
+## v4.0.0 (2026-09-01)
+
+### BREAKING CHANGE
+
+- The `release` and `requirements` inputs are no longer
+  used and will be removed after 2026-12-31.  Use the
+  `skip-artifact-downloads` input, instead.
+
+### Bug Fixes
+
+- **bashbrew-jobs**: correct invalid sibling workflow reference
+- **python-test**: update browser-actions/setup-chrome to v2.2.0
+- remove non-string default input values
+- validate inputs manually
+- **python-freeze**: update pip-tools to v7.6.0
+- **pre-commit**: update pre-commit to v4.6.1
+- **setup-bashbrew**: update actions/setup-go to v7.0.0
+- update actions/setup-python to v7.0.0
+- update actions/checkout to v7.0.1
+
+### New Features
+
+- **bashbrew-build**: build and test a Docker container image
+- **bashbrew-jobs**: generate Docker container image build jobs
+- **python-freeze**: pin dependencies to releases at least one week old
+- control workflow artifact downloads in a manner consistent with other actions
+- **fixup-act**: support running workflow jobs locally via act
+
 ## v3.0.0 (2026-07-19)
 
 ### Bug Fixes

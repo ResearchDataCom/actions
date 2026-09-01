@@ -9,7 +9,7 @@ build-backend = "setuptools.build_meta"
 # cf. tool.setuptools.package-dir section below
 name = "actions"
 description = "Simplify project release engineering with composite actions that feature privilege separation, automate testing, facilitate reproducible builds, support matrix strategies, and mitigate supply chain attacks."
-version = "3.0.0"
+version = "4.0.0"
 # cf. https://www.bitecode.dev/p/relieving-your-python-packaging-pain,
 # https://devguide.python.org/versions/
 requires-python = ">=3.12"
