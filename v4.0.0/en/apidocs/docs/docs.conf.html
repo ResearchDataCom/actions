@@ -1,0 +1,985 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta property="og:title" content="docs.conf" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="apidocs/docs/docs.conf.html" />
+<meta property="og:site_name" content="ResearchDataCom/actions" />
+<meta property="og:description" content="Configure Sphinx. Module Contents: Data:,,__metadata__, Configure Sphinx from dynamically loaded project metadata.,, author, Credits for this version.,, autodoc2_packages, Search these locations fo..." />
+<meta property="og:image:width" content="1146" />
+<meta property="og:image:height" content="600" />
+<meta property="og:image" content="_images/social_previews/summary_apidocs_docs_docs.conf_ba14ed8a.png" />
+<meta property="og:image:alt" content="Configure Sphinx. Module Contents: Data:,,__metadata__, Configure Sphinx from dynamically loaded project metadata.,, author, Credits for this version.,, autodoc2_packages, Search these locations fo..." />
+<meta name="description" content="Configure Sphinx. Module Contents: Data:,,__metadata__, Configure Sphinx from dynamically loaded project metadata.,, author, Credits for this version.,, autodoc2_packages, Search these locations fo..." />
+<meta name="twitter:card" content="summary_large_image" />
+
+    <title>docs.conf &#8212; ResearchDataCom/actions</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=9c3e77be" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../../_static/documentation_options.js?v=a1c85040"></script>
+    <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=b8b12719"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=fab101a9"></script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script defer="defer" src="https://unpkg.com/@popperjs/core@2"></script>
+    <script defer="defer" src="https://unpkg.com/tippy.js@6"></script>
+    <script defer="defer" src="../../_static/tippy/apidocs/docs/docs.conf.e8969b04-2737-42f7-9623-cef8f0854b57.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'apidocs/docs/docs.conf';</script>
+    <link rel="icon" href="../../_static/favicon-32x32.png"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="4.0" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">ResearchDataCom/actions</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+<div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Versions">
+  <div class="bd-toc-item navbar-nav">
+    <ul class="nav bd-sidenav">
+      <li class="caption has-children"><strong>Version:</strong> v4.0.0</li>
+      <li class="caption has-children"><strong>Language:</strong> en</li>
+    </ul>
+  </div>
+</div></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../index.html">
+                    Overview
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../intro.html">Get Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../roadmap.html">Product Roadmap</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../charter.html">Project Charter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contributing.html">Contribution Guidelines</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">General Purpose</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../pre-commit.html">pre-commit</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../cz-bump.html">cz-bump</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../publish-github.html">publish-github</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../sphinx-build.html">sphinx-build</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../publish-ghpages.html">publish-ghpages</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Docker</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../setup-bashbrew.html">setup-bashbrew</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../bashbrew-jobs.html">bashbrew-jobs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../bashbrew-build.html">bashbrew-build</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">OpenTofu</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../opentofu-freeze.html">opentofu-freeze</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Python</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../python-freeze.html">python-freeze</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../python-test.html">python-test</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../python-build.html">python-build</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Miscellaneous</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../fixup-act.html">fixup-act</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Appendices</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../bibliography.html">Bibliography</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../credits.html">Credits</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/ResearchDataCom/actions" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/ResearchDataCom/actions/edit/main/docs/apidocs/docs/docs.conf.md" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/ResearchDataCom/actions/issues/new?title=Issue%20on%20page%20%2Fapidocs/docs/docs.conf.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/apidocs/docs/docs.conf.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button pst-navbar-icon"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm pst-navbar-icon" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>docs.conf</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-contents">Module Contents</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data">Data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#api">API</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#docs.conf.__metadata__"><code class="docutils literal notranslate"><span class="pre">__metadata__</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#docs.conf.author"><code class="docutils literal notranslate"><span class="pre">author</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#docs.conf.autodoc2_packages"><code class="docutils literal notranslate"><span class="pre">autodoc2_packages</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#docs.conf.autodoc2_render_plugin"><code class="docutils literal notranslate"><span class="pre">autodoc2_render_plugin</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#docs.conf.autodoc2_sort_names"><code class="docutils literal notranslate"><span class="pre">autodoc2_sort_names</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#docs.conf.bibtex_bibfiles"><code class="docutils literal notranslate"><span class="pre">bibtex_bibfiles</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#docs.conf.copyright"><code class="docutils literal notranslate"><span class="pre">copyright</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#docs.conf.exclude_patterns"><code class="docutils literal notranslate"><span class="pre">exclude_patterns</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#docs.conf.extensions"><code class="docutils literal notranslate"><span class="pre">extensions</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#docs.conf.html_context"><code class="docutils literal notranslate"><span class="pre">html_context</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#docs.conf.html_favicon"><code class="docutils literal notranslate"><span class="pre">html_favicon</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#docs.conf.html_sidebars"><code class="docutils literal notranslate"><span class="pre">html_sidebars</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#docs.conf.html_static_path"><code class="docutils literal notranslate"><span class="pre">html_static_path</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#docs.conf.html_theme"><code class="docutils literal notranslate"><span class="pre">html_theme</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#docs.conf.html_theme_options"><code class="docutils literal notranslate"><span class="pre">html_theme_options</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#docs.conf.html_theme_path"><code class="docutils literal notranslate"><span class="pre">html_theme_path</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#docs.conf.html_title"><code class="docutils literal notranslate"><span class="pre">html_title</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#docs.conf.intersphinx_mapping"><code class="docutils literal notranslate"><span class="pre">intersphinx_mapping</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#docs.conf.locale_dirs"><code class="docutils literal notranslate"><span class="pre">locale_dirs</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#docs.conf.myst_dmath_double_inline"><code class="docutils literal notranslate"><span class="pre">myst_dmath_double_inline</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#docs.conf.myst_enable_checkboxes"><code class="docutils literal notranslate"><span class="pre">myst_enable_checkboxes</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#docs.conf.myst_enable_extensions"><code class="docutils literal notranslate"><span class="pre">myst_enable_extensions</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#docs.conf.myst_footnote_transition"><code class="docutils literal notranslate"><span class="pre">myst_footnote_transition</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#docs.conf.myst_heading_anchors"><code class="docutils literal notranslate"><span class="pre">myst_heading_anchors</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#docs.conf.myst_url_schemes"><code class="docutils literal notranslate"><span class="pre">myst_url_schemes</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#docs.conf.nitpicky"><code class="docutils literal notranslate"><span class="pre">nitpicky</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#docs.conf.project"><code class="docutils literal notranslate"><span class="pre">project</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#docs.conf.release"><code class="docutils literal notranslate"><span class="pre">release</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#docs.conf.suppress_warnings"><code class="docutils literal notranslate"><span class="pre">suppress_warnings</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#docs.conf.templates_path"><code class="docutils literal notranslate"><span class="pre">templates_path</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#docs.conf.version"><code class="docutils literal notranslate"><span class="pre">version</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#docs.conf.viewcode_line_numbers"><code class="docutils literal notranslate"><span class="pre">viewcode_line_numbers</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+
+
+  <section class="tex2jax_ignore mathjax_ignore" id="module-docs.conf">
+<span id="docs-conf"></span><h1><a class="reference internal" href="#module-docs.conf" title="docs.conf"><code class="xref py py-mod docutils literal notranslate"><span class="pre">docs.conf</span></code></a><a class="headerlink" href="#module-docs.conf" title="Link to this heading">#</a></h1>
+<p>Configure Sphinx.</p>
+<section id="module-contents">
+<h2>Module Contents<a class="headerlink" href="#module-contents" title="Link to this heading">#</a></h2>
+<section id="data">
+<h3>Data<a class="headerlink" href="#data" title="Link to this heading">#</a></h3>
+<div class="pst-scrollable-table-container"><table class="autosummary longtable table table-left">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#docs.conf.__metadata__" title="docs.conf.__metadata__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__metadata__</span></code></a></p></td>
+<td><p>Configure Sphinx from dynamically loaded project metadata.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#docs.conf.author" title="docs.conf.author"><code class="xref py py-obj docutils literal notranslate"><span class="pre">author</span></code></a></p></td>
+<td><p>Credits for this version.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#docs.conf.autodoc2_packages" title="docs.conf.autodoc2_packages"><code class="xref py py-obj docutils literal notranslate"><span class="pre">autodoc2_packages</span></code></a></p></td>
+<td><p>Search these locations for code to document.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#docs.conf.autodoc2_render_plugin" title="docs.conf.autodoc2_render_plugin"><code class="xref py py-obj docutils literal notranslate"><span class="pre">autodoc2_render_plugin</span></code></a></p></td>
+<td><p>Render docstrings using <a class="reference external" href="https://myst-parser.readthedocs.io/en/latest/index.html" title="MyST Parser 5.1.0">MyST Markdown</a>.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#docs.conf.autodoc2_sort_names" title="docs.conf.autodoc2_sort_names"><code class="xref py py-obj docutils literal notranslate"><span class="pre">autodoc2_sort_names</span></code></a></p></td>
+<td><p>When documenting the API, sort by name.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#docs.conf.bibtex_bibfiles" title="docs.conf.bibtex_bibfiles"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bibtex_bibfiles</span></code></a></p></td>
+<td><p><a class="reference external" href="http://www.bibtex.org/">BibTeX</a> citations.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#docs.conf.copyright" title="docs.conf.copyright"><code class="xref py py-obj docutils literal notranslate"><span class="pre">copyright</span></code></a></p></td>
+<td><p>The years over which the work was done.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#docs.conf.exclude_patterns" title="docs.conf.exclude_patterns"><code class="xref py py-obj docutils literal notranslate"><span class="pre">exclude_patterns</span></code></a></p></td>
+<td><p>Ignore these files/folders when sourcing content.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#docs.conf.extensions" title="docs.conf.extensions"><code class="xref py py-obj docutils literal notranslate"><span class="pre">extensions</span></code></a></p></td>
+<td><p>This documentation uses several Sphinx extensions.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#docs.conf.html_context" title="docs.conf.html_context"><code class="xref py py-obj docutils literal notranslate"><span class="pre">html_context</span></code></a></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#docs.conf.html_favicon" title="docs.conf.html_favicon"><code class="xref py py-obj docutils literal notranslate"><span class="pre">html_favicon</span></code></a></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#docs.conf.html_sidebars" title="docs.conf.html_sidebars"><code class="xref py py-obj docutils literal notranslate"><span class="pre">html_sidebars</span></code></a></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#docs.conf.html_static_path" title="docs.conf.html_static_path"><code class="xref py py-obj docutils literal notranslate"><span class="pre">html_static_path</span></code></a></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#docs.conf.html_theme" title="docs.conf.html_theme"><code class="xref py py-obj docutils literal notranslate"><span class="pre">html_theme</span></code></a></p></td>
+<td><p>Use the Sphinx Book Theme template for web content.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#docs.conf.html_theme_options" title="docs.conf.html_theme_options"><code class="xref py py-obj docutils literal notranslate"><span class="pre">html_theme_options</span></code></a></p></td>
+<td><p>Configure web content generation.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#docs.conf.html_theme_path" title="docs.conf.html_theme_path"><code class="xref py py-obj docutils literal notranslate"><span class="pre">html_theme_path</span></code></a></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#docs.conf.html_title" title="docs.conf.html_title"><code class="xref py py-obj docutils literal notranslate"><span class="pre">html_title</span></code></a></p></td>
+<td><p>The title for HTML documentation;
+cf. <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/configuration.html#confval-html_title" title="Sphinx 9.1.1"><code class="docutils literal notranslate"><span class="pre">html_title</span></code></a>.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#docs.conf.intersphinx_mapping" title="docs.conf.intersphinx_mapping"><code class="xref py py-obj docutils literal notranslate"><span class="pre">intersphinx_mapping</span></code></a></p></td>
+<td><p>Cross-reference other Sphinx documentation projects.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#docs.conf.locale_dirs" title="docs.conf.locale_dirs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">locale_dirs</span></code></a></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#docs.conf.myst_dmath_double_inline" title="docs.conf.myst_dmath_double_inline"><code class="xref py py-obj docutils literal notranslate"><span class="pre">myst_dmath_double_inline</span></code></a></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#docs.conf.myst_enable_checkboxes" title="docs.conf.myst_enable_checkboxes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">myst_enable_checkboxes</span></code></a></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#docs.conf.myst_enable_extensions" title="docs.conf.myst_enable_extensions"><code class="xref py py-obj docutils literal notranslate"><span class="pre">myst_enable_extensions</span></code></a></p></td>
+<td><p>Enable all MyST parser extensions.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#docs.conf.myst_footnote_transition" title="docs.conf.myst_footnote_transition"><code class="xref py py-obj docutils literal notranslate"><span class="pre">myst_footnote_transition</span></code></a></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#docs.conf.myst_heading_anchors" title="docs.conf.myst_heading_anchors"><code class="xref py py-obj docutils literal notranslate"><span class="pre">myst_heading_anchors</span></code></a></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#docs.conf.myst_url_schemes" title="docs.conf.myst_url_schemes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">myst_url_schemes</span></code></a></p></td>
+<td><p>Define custom URL schemes;
+cf. <a class="reference external" href="https://myst-parser.readthedocs.io/en/latest/syntax/cross-referencing.html" title="MyST Parser 5.1.0">Cross-references</a>.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#docs.conf.nitpicky" title="docs.conf.nitpicky"><code class="xref py py-obj docutils literal notranslate"><span class="pre">nitpicky</span></code></a></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#docs.conf.project" title="docs.conf.project"><code class="xref py py-obj docutils literal notranslate"><span class="pre">project</span></code></a></p></td>
+<td><p>The project name.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#docs.conf.release" title="docs.conf.release"><code class="xref py py-obj docutils literal notranslate"><span class="pre">release</span></code></a></p></td>
+<td><p>The full version number, including the patch level (X.Y.Z).</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#docs.conf.suppress_warnings" title="docs.conf.suppress_warnings"><code class="xref py py-obj docutils literal notranslate"><span class="pre">suppress_warnings</span></code></a></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#docs.conf.templates_path" title="docs.conf.templates_path"><code class="xref py py-obj docutils literal notranslate"><span class="pre">templates_path</span></code></a></p></td>
+<td><p>These directories contain documentation templates.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#docs.conf.version" title="docs.conf.version"><code class="xref py py-obj docutils literal notranslate"><span class="pre">version</span></code></a></p></td>
+<td><p>The short version number (X.Y).</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#docs.conf.viewcode_line_numbers" title="docs.conf.viewcode_line_numbers"><code class="xref py py-obj docutils literal notranslate"><span class="pre">viewcode_line_numbers</span></code></a></p></td>
+<td><p>Add line numbers to embedded source code listings.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="api">
+<h3>API<a class="headerlink" href="#api" title="Link to this heading">#</a></h3>
+<dl class="py data">
+<dt class="sig sig-object py" id="docs.conf.__metadata__">
+<span class="sig-prename descclassname"><span class="pre">docs.conf.</span></span><span class="sig-name descname"><span class="pre">__metadata__</span></span><a class="headerlink" href="#docs.conf.__metadata__" title="Link to this definition">#</a></dt>
+<dd><p>‘load(…)’</p>
+<p>Configure Sphinx from dynamically loaded project metadata.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="docs.conf.author">
+<span class="sig-prename descclassname"><span class="pre">docs.conf.</span></span><span class="sig-name descname"><span class="pre">author</span></span><a class="headerlink" href="#docs.conf.author" title="Link to this definition">#</a></dt>
+<dd><p>‘Research Data and Communication Technologies Benefit Corp.’</p>
+<p>Credits for this version.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="docs.conf.autodoc2_packages">
+<span class="sig-prename descclassname"><span class="pre">docs.conf.</span></span><span class="sig-name descname"><span class="pre">autodoc2_packages</span></span><a class="headerlink" href="#docs.conf.autodoc2_packages" title="Link to this definition">#</a></dt>
+<dd><p>None</p>
+<p>Search these locations for code to document.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="docs.conf.autodoc2_render_plugin">
+<span class="sig-prename descclassname"><span class="pre">docs.conf.</span></span><span class="sig-name descname"><span class="pre">autodoc2_render_plugin</span></span><a class="headerlink" href="#docs.conf.autodoc2_render_plugin" title="Link to this definition">#</a></dt>
+<dd><p>‘myst’</p>
+<p>Render docstrings using <a class="reference external" href="https://myst-parser.readthedocs.io/en/latest/index.html" title="MyST Parser 5.1.0">MyST Markdown</a>.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="docs.conf.autodoc2_sort_names">
+<span class="sig-prename descclassname"><span class="pre">docs.conf.</span></span><span class="sig-name descname"><span class="pre">autodoc2_sort_names</span></span><a class="headerlink" href="#docs.conf.autodoc2_sort_names" title="Link to this definition">#</a></dt>
+<dd><p>True</p>
+<p>When documenting the API, sort by name.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="docs.conf.bibtex_bibfiles">
+<span class="sig-prename descclassname"><span class="pre">docs.conf.</span></span><span class="sig-name descname"><span class="pre">bibtex_bibfiles</span></span><a class="headerlink" href="#docs.conf.bibtex_bibfiles" title="Link to this definition">#</a></dt>
+<dd><p>[‘refs.bib’]</p>
+<p><a class="reference external" href="http://www.bibtex.org/">BibTeX</a> citations.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="docs.conf.copyright">
+<span class="sig-prename descclassname"><span class="pre">docs.conf.</span></span><span class="sig-name descname"><span class="pre">copyright</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;Multiline-String&gt;</span></span><a class="headerlink" href="#docs.conf.copyright" title="Link to this definition">#</a></dt>
+<dd><p>The years over which the work was done.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="docs.conf.exclude_patterns">
+<span class="sig-prename descclassname"><span class="pre">docs.conf.</span></span><span class="sig-name descname"><span class="pre">exclude_patterns</span></span><a class="headerlink" href="#docs.conf.exclude_patterns" title="Link to this definition">#</a></dt>
+<dd><p>[‘.*’, ‘Thumbs.db’, ‘.DS_Store’]</p>
+<p>Ignore these files/folders when sourcing content.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="docs.conf.extensions">
+<span class="sig-prename descclassname"><span class="pre">docs.conf.</span></span><span class="sig-name descname"><span class="pre">extensions</span></span><a class="headerlink" href="#docs.conf.extensions" title="Link to this definition">#</a></dt>
+<dd><p>[‘autodoc2’, ‘myst_parser’, ‘sphinx.ext.githubpages’, ‘sphinx.ext.intersphinx’, ‘sphinx.ext.viewcode…</p>
+<p>This documentation uses several Sphinx extensions.</p>
+<dl class="simple myst">
+<dt><a class="reference external" href="https://sphinx-autodoc2.readthedocs.io/en/latest/index.html" title="sphinx-autodoc2 0.5.0">sphinx-autodoc2</a></dt><dd><p>Generate API documentation automatically.</p>
+</dd>
+<dt><a class="reference external" href="https://myst-parser.readthedocs.io/en/latest/index.html" title="MyST Parser 5.1.0">myst-parser</a></dt><dd><p>Render Markdown in documentation and docstrings.</p>
+</dd>
+<dt><a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/extensions/githubpages.html" title="Sphinx 9.1.1">sphinx.ext.githubpages</a></dt><dd><p>Publish HTML documentation in GitHub Pages.</p>
+</dd>
+<dt><a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/extensions/intersphinx.html" title="Sphinx 9.1.1">sphinx.ext.intersphinx</a></dt><dd><p>Link to other projects’ documentation.</p>
+</dd>
+<dt><a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/extensions/viewcode.html" title="Sphinx 9.1.1">sphinx.ext.viewcode</a></dt><dd><p>Link to highlighted source code.</p>
+</dd>
+<dt><a class="reference external" href="https://sphinx-copybutton.readthedocs.io/en/latest/index.html" title="Sphinx Copybutton">sphinx-copybutton</a></dt><dd><p>Add a <code class="docutils literal notranslate"><span class="pre">copy</span></code> button to code blocks.</p>
+</dd>
+<dt><a class="reference external" href="https://sphinx-design.readthedocs.io/en/latest/index.html" title="Sphinx Design">sphinx-design</a></dt><dd><p>Provide screen-size responsive web components.</p>
+</dd>
+<dt><a class="reference external" href="https://sphinx-pyscript.readthedocs.io/en/latest/index.html" title="Sphinx PyScript 0.1.0">Sphinx PyScript</a></dt><dd><p>Use PyScript in built documentation.</p>
+</dd>
+<dt><a class="reference external" href="https://sphinx-tippy.readthedocs.io/en/latest/index.html" title="Sphinx Tippy 0.4.3">Sphinx Tippy</a></dt><dd><p>Add rich hints (tooltips) to built documentation.</p>
+</dd>
+<dt><a class="reference external" href="https://sphinx-togglebutton.readthedocs.io/en/latest/index.html" title="Sphinx Toggle Button">sphinx-togglebutton</a></dt><dd><p>Add collapsable admonitions (notes, warnings, etc.) to built
+documentation.</p>
+</dd>
+<dt>&lt;inv:sphbibtex:std:doc#index sphinxcontrib-bibtex&gt;</dt><dd><p>Allow BibTeX citations to be inserted into documentation generated
+by Sphinx via a bibliography directive, along with <code class="docutils literal notranslate"><span class="pre">cite:p</span></code> and
+<code class="docutils literal notranslate"><span class="pre">cite:t</span></code> roles.</p>
+</dd>
+<dt><a class="reference external" href="https://pypi.org/project/sphinxcontrib-svg2pdfconverter/">sphinxcontrib.cairosvgconverter</a></dt><dd><p>Convert SVG diagrams to PDF for output formats that do not support
+SVG natively.</p>
+</dd>
+<dt><a class="reference external" href="https://sphinxext-opengraph.readthedocs.io/en/latest/index.html" title="sphinxext-opengraph 0.13.0">sphinxext-opengraph</a></dt><dd><p>Turn web pages into Open Graph objects.</p>
+</dd>
+<dt><a class="reference external" href="https://sphinxext-rediraffe.readthedocs.io/en/latest/index.html" title="sphinxext-rediraffe 0.3.0">sphinxext-rediraffe</a></dt><dd><p>Fix broken internal links due to deleted/renamed pages.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="docs.conf.html_context">
+<span class="sig-prename descclassname"><span class="pre">docs.conf.</span></span><span class="sig-name descname"><span class="pre">html_context</span></span><a class="headerlink" href="#docs.conf.html_context" title="Link to this definition">#</a></dt>
+<dd><p>None</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="docs.conf.html_favicon">
+<span class="sig-prename descclassname"><span class="pre">docs.conf.</span></span><span class="sig-name descname"><span class="pre">html_favicon</span></span><a class="headerlink" href="#docs.conf.html_favicon" title="Link to this definition">#</a></dt>
+<dd><p>‘_static/favicon-32x32.png’</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="docs.conf.html_sidebars">
+<span class="sig-prename descclassname"><span class="pre">docs.conf.</span></span><span class="sig-name descname"><span class="pre">html_sidebars</span></span><a class="headerlink" href="#docs.conf.html_sidebars" title="Link to this definition">#</a></dt>
+<dd><p>None</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="docs.conf.html_static_path">
+<span class="sig-prename descclassname"><span class="pre">docs.conf.</span></span><span class="sig-name descname"><span class="pre">html_static_path</span></span><a class="headerlink" href="#docs.conf.html_static_path" title="Link to this definition">#</a></dt>
+<dd><p>[‘_static’]</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="docs.conf.html_theme">
+<span class="sig-prename descclassname"><span class="pre">docs.conf.</span></span><span class="sig-name descname"><span class="pre">html_theme</span></span><a class="headerlink" href="#docs.conf.html_theme" title="Link to this definition">#</a></dt>
+<dd><p>‘sphinx_book_theme’</p>
+<p>Use the Sphinx Book Theme template for web content.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="docs.conf.html_theme_options">
+<span class="sig-prename descclassname"><span class="pre">docs.conf.</span></span><span class="sig-name descname"><span class="pre">html_theme_options</span></span><a class="headerlink" href="#docs.conf.html_theme_options" title="Link to this definition">#</a></dt>
+<dd><p>None</p>
+<p>Configure web content generation.</p>
+<dl class="simple myst">
+<dt><a class="reference external" href="https://sphinx-book-theme.readthedocs.io/en/stable/sections/sidebar-primary.html" title="Sphinx Book Theme"><code class="docutils literal notranslate"><span class="pre">home_page_in_toc</span></code></a></dt><dd><p>Add the home page to the table of contents.</p>
+</dd>
+<dt><a class="reference external" href="https://sphinx-book-theme.readthedocs.io/en/stable/components/source-files.html" title="Sphinx Book Theme"><code class="docutils literal notranslate"><span class="pre">repository_url</span></code>, <code class="docutils literal notranslate"><span class="pre">path_to_docs</span></code>, <code class="docutils literal notranslate"><span class="pre">use_edit_page_button</span></code>, <code class="docutils literal notranslate"><span class="pre">use_repository_button</span></code>, <code class="docutils literal notranslate"><span class="pre">use_issues_button</span></code></a></dt><dd><p>Link to doc sources and include buttons for suggesting edits or
+creating new issues.</p>
+</dd>
+<dt><a class="reference external" href="https://sphinx-book-theme.readthedocs.io/en/stable/reference.html" title="Sphinx Book Theme"><code class="docutils literal notranslate"><span class="pre">use_fullscreen_button</span></code></a></dt><dd><p>Add a button to show the site full screen.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="docs.conf.html_theme_path">
+<span class="sig-prename descclassname"><span class="pre">docs.conf.</span></span><span class="sig-name descname"><span class="pre">html_theme_path</span></span><a class="headerlink" href="#docs.conf.html_theme_path" title="Link to this definition">#</a></dt>
+<dd><p>None</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="docs.conf.html_title">
+<span class="sig-prename descclassname"><span class="pre">docs.conf.</span></span><span class="sig-name descname"><span class="pre">html_title</span></span><a class="headerlink" href="#docs.conf.html_title" title="Link to this definition">#</a></dt>
+<dd><p>None</p>
+<p>The title for HTML documentation;
+cf. <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/configuration.html#confval-html_title" title="Sphinx 9.1.1"><code class="docutils literal notranslate"><span class="pre">html_title</span></code></a>.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="docs.conf.intersphinx_mapping">
+<span class="sig-prename descclassname"><span class="pre">docs.conf.</span></span><span class="sig-name descname"><span class="pre">intersphinx_mapping</span></span><a class="headerlink" href="#docs.conf.intersphinx_mapping" title="Link to this definition">#</a></dt>
+<dd><p>None</p>
+<p>Cross-reference other Sphinx documentation projects.</p>
+<p>Use the <a class="reference external" href="https://sphobjinv.readthedocs.io/en/latest/cli/suggest.html" title="sphobjinv 2.4"><code class="docutils literal notranslate"><span class="pre">sphobjinv</span> <span class="pre">suggest</span></code></a>
+command to find intersphinx references using the documentation URL,
+e.g., <code class="docutils literal notranslate"><span class="pre">sphobjinv</span> <span class="pre">suggest</span> <span class="pre">-u</span> <span class="pre">https://sphobjinv.readthedocs.io/en/latest/cli/suggest.html</span> <span class="pre">suggest</span></code>.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="docs.conf.locale_dirs">
+<span class="sig-prename descclassname"><span class="pre">docs.conf.</span></span><span class="sig-name descname"><span class="pre">locale_dirs</span></span><a class="headerlink" href="#docs.conf.locale_dirs" title="Link to this definition">#</a></dt>
+<dd><p>[‘_locales’]</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="docs.conf.myst_dmath_double_inline">
+<span class="sig-prename descclassname"><span class="pre">docs.conf.</span></span><span class="sig-name descname"><span class="pre">myst_dmath_double_inline</span></span><a class="headerlink" href="#docs.conf.myst_dmath_double_inline" title="Link to this definition">#</a></dt>
+<dd><p>True</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="docs.conf.myst_enable_checkboxes">
+<span class="sig-prename descclassname"><span class="pre">docs.conf.</span></span><span class="sig-name descname"><span class="pre">myst_enable_checkboxes</span></span><a class="headerlink" href="#docs.conf.myst_enable_checkboxes" title="Link to this definition">#</a></dt>
+<dd><p>True</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="docs.conf.myst_enable_extensions">
+<span class="sig-prename descclassname"><span class="pre">docs.conf.</span></span><span class="sig-name descname"><span class="pre">myst_enable_extensions</span></span><a class="headerlink" href="#docs.conf.myst_enable_extensions" title="Link to this definition">#</a></dt>
+<dd><p>[‘amsmath’, ‘attrs_block’, ‘attrs_inline’, ‘colon_fence’, ‘deflist’, ‘dollarmath’, ‘fieldlist’, ‘htm…</p>
+<p>Enable all MyST parser extensions.</p>
+<p>For more information, refer to
+<a class="reference external" href="https://myst-parser.readthedocs.io/en/latest/syntax/optional.html#syntax-extensions" title="MyST Parser 5.1.0">the documentation</a>.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="docs.conf.myst_footnote_transition">
+<span class="sig-prename descclassname"><span class="pre">docs.conf.</span></span><span class="sig-name descname"><span class="pre">myst_footnote_transition</span></span><a class="headerlink" href="#docs.conf.myst_footnote_transition" title="Link to this definition">#</a></dt>
+<dd><p>True</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="docs.conf.myst_heading_anchors">
+<span class="sig-prename descclassname"><span class="pre">docs.conf.</span></span><span class="sig-name descname"><span class="pre">myst_heading_anchors</span></span><a class="headerlink" href="#docs.conf.myst_heading_anchors" title="Link to this definition">#</a></dt>
+<dd><p>2</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="docs.conf.myst_url_schemes">
+<span class="sig-prename descclassname"><span class="pre">docs.conf.</span></span><span class="sig-name descname"><span class="pre">myst_url_schemes</span></span><a class="headerlink" href="#docs.conf.myst_url_schemes" title="Link to this definition">#</a></dt>
+<dd><p>None</p>
+<p>Define custom URL schemes;
+cf. <a class="reference external" href="https://myst-parser.readthedocs.io/en/latest/syntax/cross-referencing.html" title="MyST Parser 5.1.0">Cross-references</a>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Preview builds of the documentation, e.g., created by the <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">html</span></code>
+command, will not have valid links to source code on GitHub.  The
+<code class="docutils literal notranslate"><span class="pre">github:</span></code> scheme only correctly accounts for the project’s current
+version when performing a multi-version build of the documentation via
+the <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">docs</span></code> command.</p>
+</div>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="docs.conf.nitpicky">
+<span class="sig-prename descclassname"><span class="pre">docs.conf.</span></span><span class="sig-name descname"><span class="pre">nitpicky</span></span><a class="headerlink" href="#docs.conf.nitpicky" title="Link to this definition">#</a></dt>
+<dd><p>True</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="docs.conf.project">
+<span class="sig-prename descclassname"><span class="pre">docs.conf.</span></span><span class="sig-name descname"><span class="pre">project</span></span><a class="headerlink" href="#docs.conf.project" title="Link to this definition">#</a></dt>
+<dd><p>‘ResearchDataCom/actions’</p>
+<p>The project name.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="docs.conf.release">
+<span class="sig-prename descclassname"><span class="pre">docs.conf.</span></span><span class="sig-name descname"><span class="pre">release</span></span><a class="headerlink" href="#docs.conf.release" title="Link to this definition">#</a></dt>
+<dd><p>None</p>
+<p>The full version number, including the patch level (X.Y.Z).</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="docs.conf.suppress_warnings">
+<span class="sig-prename descclassname"><span class="pre">docs.conf.</span></span><span class="sig-name descname"><span class="pre">suppress_warnings</span></span><a class="headerlink" href="#docs.conf.suppress_warnings" title="Link to this definition">#</a></dt>
+<dd><p>[‘myst.strikethrough’]</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="docs.conf.templates_path">
+<span class="sig-prename descclassname"><span class="pre">docs.conf.</span></span><span class="sig-name descname"><span class="pre">templates_path</span></span><a class="headerlink" href="#docs.conf.templates_path" title="Link to this definition">#</a></dt>
+<dd><p>[‘_templates’]</p>
+<p>These directories contain documentation templates.</p>
+<p>Paths are relative to this file’s parent directory.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="docs.conf.version">
+<span class="sig-prename descclassname"><span class="pre">docs.conf.</span></span><span class="sig-name descname"><span class="pre">version</span></span><a class="headerlink" href="#docs.conf.version" title="Link to this definition">#</a></dt>
+<dd><p>‘join(…)’</p>
+<p>The short version number (X.Y).</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="docs.conf.viewcode_line_numbers">
+<span class="sig-prename descclassname"><span class="pre">docs.conf.</span></span><span class="sig-name descname"><span class="pre">viewcode_line_numbers</span></span><a class="headerlink" href="#docs.conf.viewcode_line_numbers" title="Link to this definition">#</a></dt>
+<dd><p>True</p>
+<p>Add line numbers to embedded source code listings.</p>
+</dd></dl>
+
+</section>
+</section>
+</section>
+
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item"><div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-contents">Module Contents</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data">Data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#api">API</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#docs.conf.__metadata__"><code class="docutils literal notranslate"><span class="pre">__metadata__</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#docs.conf.author"><code class="docutils literal notranslate"><span class="pre">author</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#docs.conf.autodoc2_packages"><code class="docutils literal notranslate"><span class="pre">autodoc2_packages</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#docs.conf.autodoc2_render_plugin"><code class="docutils literal notranslate"><span class="pre">autodoc2_render_plugin</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#docs.conf.autodoc2_sort_names"><code class="docutils literal notranslate"><span class="pre">autodoc2_sort_names</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#docs.conf.bibtex_bibfiles"><code class="docutils literal notranslate"><span class="pre">bibtex_bibfiles</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#docs.conf.copyright"><code class="docutils literal notranslate"><span class="pre">copyright</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#docs.conf.exclude_patterns"><code class="docutils literal notranslate"><span class="pre">exclude_patterns</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#docs.conf.extensions"><code class="docutils literal notranslate"><span class="pre">extensions</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#docs.conf.html_context"><code class="docutils literal notranslate"><span class="pre">html_context</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#docs.conf.html_favicon"><code class="docutils literal notranslate"><span class="pre">html_favicon</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#docs.conf.html_sidebars"><code class="docutils literal notranslate"><span class="pre">html_sidebars</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#docs.conf.html_static_path"><code class="docutils literal notranslate"><span class="pre">html_static_path</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#docs.conf.html_theme"><code class="docutils literal notranslate"><span class="pre">html_theme</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#docs.conf.html_theme_options"><code class="docutils literal notranslate"><span class="pre">html_theme_options</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#docs.conf.html_theme_path"><code class="docutils literal notranslate"><span class="pre">html_theme_path</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#docs.conf.html_title"><code class="docutils literal notranslate"><span class="pre">html_title</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#docs.conf.intersphinx_mapping"><code class="docutils literal notranslate"><span class="pre">intersphinx_mapping</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#docs.conf.locale_dirs"><code class="docutils literal notranslate"><span class="pre">locale_dirs</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#docs.conf.myst_dmath_double_inline"><code class="docutils literal notranslate"><span class="pre">myst_dmath_double_inline</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#docs.conf.myst_enable_checkboxes"><code class="docutils literal notranslate"><span class="pre">myst_enable_checkboxes</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#docs.conf.myst_enable_extensions"><code class="docutils literal notranslate"><span class="pre">myst_enable_extensions</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#docs.conf.myst_footnote_transition"><code class="docutils literal notranslate"><span class="pre">myst_footnote_transition</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#docs.conf.myst_heading_anchors"><code class="docutils literal notranslate"><span class="pre">myst_heading_anchors</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#docs.conf.myst_url_schemes"><code class="docutils literal notranslate"><span class="pre">myst_url_schemes</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#docs.conf.nitpicky"><code class="docutils literal notranslate"><span class="pre">nitpicky</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#docs.conf.project"><code class="docutils literal notranslate"><span class="pre">project</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#docs.conf.release"><code class="docutils literal notranslate"><span class="pre">release</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#docs.conf.suppress_warnings"><code class="docutils literal notranslate"><span class="pre">suppress_warnings</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#docs.conf.templates_path"><code class="docutils literal notranslate"><span class="pre">templates_path</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#docs.conf.version"><code class="docutils literal notranslate"><span class="pre">version</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#docs.conf.viewcode_line_numbers"><code class="docutils literal notranslate"><span class="pre">viewcode_line_numbers</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Research Data and Communication Technologies Benefit Corp.
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    <p class="copyright">
+This work is marked
+<a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0 1.0 Universal</a>.
+</p>
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
