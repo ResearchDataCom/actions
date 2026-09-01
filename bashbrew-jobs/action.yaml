@@ -29,7 +29,7 @@ runs:
         WORKSPACE_PATH: "${{ github.workspace }}"
     - name: Install Bashbrew et al.
       id: bashbrew
-      uses: ./../action-siblings/ResearchDataCom/actions/bashbrew-strategy/setup-bashbrew
+      uses: ./../action-siblings/ResearchDataCom/actions/bashbrew-jobs/setup-bashbrew
     - name: Clone this GitHub repository (just the latest commit).
       uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
     - name: Generate Docker container image build jobs.
